@@ -20,10 +20,14 @@ const Footer = () => {
                 className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 bg-white p-2 rounded-xl" 
               />
             </Link>
-            <p className="text-gray-400 leading-relaxed mb-8 text-sm">
+            <p className="text-gray-400 leading-relaxed mb-6 text-sm">
               Society for Research and Initiatives for Sustainable Technologies and Institutions. 
               Empowering grassroots innovators and protecting their intellectual property rights.
             </p>
+            <div className="mb-8 space-y-1">
+              <p className="text-gray-500 text-xs"><span className="font-semibold text-gray-400">Registration No:</span> 04-35923</p>
+              <p className="text-gray-500 text-xs"><span className="font-semibold text-gray-400">GST No:</span> 24AAETS4798M1ZP</p>
+            </div>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-sristi-green-600 hover:text-white transition-all duration-300"><FaFacebook size={18} /></a>
               <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-sristi-green-600 hover:text-white transition-all duration-300"><FaTwitter size={18} /></a>

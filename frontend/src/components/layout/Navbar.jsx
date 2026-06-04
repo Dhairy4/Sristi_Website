@@ -156,7 +156,7 @@ const Navbar = () => {
 
       {/* Mobile Drawer Side Panel */}
       <div 
-        className={`fixed top-0 right-0 h-full w-[85vw] sm:w-[420px] bg-white/95 backdrop-blur-xl z-50 transform transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) shadow-2xl flex flex-col xl:hidden ${
+        className={`fixed top-0 right-0 h-[100dvh] w-[85vw] sm:w-[420px] bg-white/95 backdrop-blur-xl z-50 transform transition-transform duration-500 ease-out shadow-2xl flex flex-col xl:hidden ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -224,7 +224,7 @@ const Navbar = () => {
                   key={item.name}
                   to={item.path}
                   className={({ isActive }) => 
-                    `text-xl font-medium transition-colors duration-200 border-b border-gray-100/50 pb-5 ${
+                    `block w-full text-xl font-medium transition-colors duration-200 border-b border-gray-100/50 pb-5 ${
                       isActive ? 'text-emerald-700' : 'text-gray-800 hover:text-emerald-700'
                     }`
                   }
