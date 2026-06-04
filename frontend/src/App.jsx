@@ -1,9 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import SristiHeroSlider from './components/ui/SristiHeroSlider';
 
 // Placeholder Pages for Task 1
-const Home = () => <div className="min-h-[70vh] flex items-center justify-center text-4xl font-bold text-gray-800">Home Page</div>;
+const Home = () => (
+  <div>
+    <SristiHeroSlider />
+  </div>
+);
 const AboutUs = () => <div className="min-h-[70vh] flex items-center justify-center text-4xl font-bold text-gray-800">About Us Page</div>;
 const Incubator = () => <div className="min-h-[70vh] flex items-center justify-center text-4xl font-bold text-gray-800">Incubator Page</div>;
 const Contact = () => <div className="min-h-[70vh] flex items-center justify-center text-4xl font-bold text-gray-800">Contact Page</div>;
