@@ -52,8 +52,9 @@ const Navbar = () => {
   const baseLinkClasses = "transition-colors duration-300 py-2 after:content-[''] after:absolute after:h-0.5 after:left-0 after:-bottom-1 after:transition-all after:duration-300";
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100/50 shadow-sm transition-all duration-300">
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100/50 shadow-sm transition-all duration-300">
+        <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center">
@@ -144,11 +145,12 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+    </nav>
 
       {/* Mobile Drawer Overlay */}
       <div 
-        className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity duration-300 xl:hidden ${
-          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-[100] transition-opacity duration-300 xl:hidden ${
+          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
         }`}
         onClick={() => setIsOpen(false)}
         aria-hidden="true"
@@ -156,8 +158,8 @@ const Navbar = () => {
 
       {/* Mobile Drawer Side Panel */}
       <div 
-        className={`fixed top-0 right-0 h-[100dvh] w-[85vw] sm:w-[420px] bg-white/95 backdrop-blur-xl z-50 transform transition-transform duration-500 ease-out shadow-2xl flex flex-col xl:hidden ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-0 right-0 h-[100dvh] w-[85vw] sm:w-[420px] bg-white/95 backdrop-blur-xl z-[110] transform transition-all duration-500 ease-out flex flex-col xl:hidden ${
+          isOpen ? 'translate-x-0 shadow-2xl opacity-100' : 'translate-x-[100%] shadow-none opacity-0 pointer-events-none'
         }`}
       >
         {/* Drawer Header */}
@@ -205,7 +207,7 @@ const Navbar = () => {
                             key={child.name}
                             to={child.path}
                             className={({ isActive }) => 
-                              `text-lg transition-colors duration-200 py-1 ${
+                              `block w-full text-lg transition-colors duration-200 py-1 ${
                                 isActive ? 'text-emerald-700 font-semibold' : 'text-gray-600 hover:text-emerald-700'
                               }`
                             }
@@ -243,7 +245,7 @@ const Navbar = () => {
           </p>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 
