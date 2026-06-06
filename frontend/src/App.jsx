@@ -7,7 +7,9 @@ import WhatWeOfferSection from './components/landing/WhatWeOfferSection';
 import PromotionalBanners from './components/landing/PromotionalBanners';
 import AboutUs from './pages/AboutUs';
 import WhatWeOffer from './pages/WhatWeOffer';
-
+import OurStartups from './pages/OurStartups';
+import Incubator from './pages/Incubator';
+import Contact from './pages/Contact';
 // Placeholder Pages for Task 1
 const Home = () => (
   <div>
@@ -17,8 +19,6 @@ const Home = () => (
     <PromotionalBanners />
   </div>
 );
-const Incubator = () => <div className="min-h-[70vh] flex items-center justify-center text-4xl font-bold text-gray-800">Incubator Page</div>;
-const Contact = () => <div className="min-h-[70vh] flex items-center justify-center text-4xl font-bold text-gray-800">Contact Page</div>;
 
 function App() {
   return (
@@ -31,7 +31,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
              <Route path="/what-we-offer" element={<WhatWeOffer />} />
+            <Route path="/" element={<Home />} />
             <Route path="/incubator" element={<Incubator />} />
+            <Route path="/our-startups" element={<OurStartups />} />
+            <Route path="/startups" element={<OurStartups />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
