@@ -6,6 +6,7 @@ import AboutUsSection from './components/landing/AboutUsSection';
 import WhatWeOfferSection from './components/landing/WhatWeOfferSection';
 import PromotionalBanners from './components/landing/PromotionalBanners';
 import AboutUs from './pages/AboutUs';
+import WhatWeOffer from './pages/WhatWeOffer';
 
 // Placeholder Pages for Task 1
 const Home = () => (
@@ -29,6 +30,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
+             <Route path="/what-we-offer" element={<WhatWeOffer />} />
             <Route path="/incubator" element={<Incubator />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
