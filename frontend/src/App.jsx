@@ -4,6 +4,7 @@ import Footer from './components/layout/Footer';
 import SristiHeroSlider from './components/ui/SristiHeroSlider';
 import AboutUsSection from './components/landing/AboutUsSection';
 import AboutUs from './pages/AboutUs';
+import WhatWeOffer from './pages/WhatWeOffer';
 
 // Placeholder Pages for Task 1
 const Home = () => (
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
+             <Route path="/what-we-offer" element={<WhatWeOffer />} />
             <Route path="/incubator" element={<Incubator />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
