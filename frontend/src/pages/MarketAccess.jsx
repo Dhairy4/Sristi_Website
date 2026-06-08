@@ -159,7 +159,7 @@ const MarketAccess = () => {
       </section>
 
       {/* 4. Incubatees Banner */}
-      <section id="incubatees" className="py-24 scroll-mt-0">
+      {/* <section id="incubatees" className="py-24 scroll-mt-0">
          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="relative bg-emerald-900 rounded-[3rem] overflow-hidden shadow-2xl p-10 md:p-16 lg:p-20 text-center">
                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
@@ -181,14 +181,14 @@ const MarketAccess = () => {
                </div>
             </motion.div>
          </div>
-      </section>
+      </section> */}
 
       {/* 5. Resources Bento Grid & 6. Growth Meet */}
       <section className="bg-white py-24 border-t border-gray-100">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-16 lg:gap-24">
                
-               {/* Resources */}
+               {/* Resources
                <motion.div id="resources" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="scroll-mt-32">
                  <div className="flex items-center gap-4 mb-8">
                    <div className="p-3 bg-emerald-100 rounded-xl text-emerald-700">
@@ -220,7 +220,7 @@ const MarketAccess = () => {
                       </div>
                    </div>
                  </div>
-               </motion.div>
+               </motion.div> */}
 
                {/* Growth Meet */}
                <motion.div id="growth-meet" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="scroll-mt-32 flex flex-col justify-center">
