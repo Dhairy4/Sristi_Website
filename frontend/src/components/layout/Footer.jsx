@@ -84,7 +84,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-5">
               <li className="flex items-start gap-4">
-                <div className="mt-1 w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0">
+                <div className="mt-1 w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center shrink-0">
                   <Phone className="text-sristi-green-400" size={18} />
                 </div>
                 <div className="flex flex-col">
@@ -93,13 +93,13 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center shrink-0">
                   <Mail className="text-sristi-green-400" size={18} />
                 </div>
                 <a href="mailto:bionest@sristiinnovations.com" className="text-sm text-gray-400 hover:text-white transition-colors">bionest@sristiinnovations.com</a>
               </li>
               <li className="flex items-start gap-4">
-                <div className="mt-1 w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0">
+                <div className="mt-1 w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center shrink-0">
                   <MapPin className="text-sristi-green-400" size={18} />
                 </div>
                 <div className="flex flex-col">
@@ -108,7 +108,7 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <div className="mt-1 w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0">
+                <div className="mt-1 w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center shrink-0">
                   <MapPin className="text-sristi-green-400" size={18} />
                 </div>
                 <div className="flex flex-col">
