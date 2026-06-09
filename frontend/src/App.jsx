@@ -11,9 +11,17 @@ import WhatWeOffer from './pages/WhatWeOffer';
 import OurStartups from './pages/OurStartups';
 import Incubator from './pages/Incubator';
 import Contact from './pages/Contact';
-import MarketAccess from './pages/MarketAccess';
-import Magazines from './pages/publications/Magazines';
 import Books from './pages/publications/Books';
+import Magazines from './pages/publications/Magazines';
+
+// New specialized market access pages
+import KhedutHaat from './pages/KhedutHaat';
+import KhedutHaatDetails from './pages/KhedutHaatDetails';
+import Sattvik from './pages/Sattvik';
+import Networking from './pages/Networking';
+import Incubatees from './pages/Incubatees';
+import Resources from './pages/Resources';
+import GrowthMeet from './pages/GrowthMeet';
 
 // Placeholder Pages for Task 1
 const Home = () => (
@@ -41,11 +49,18 @@ function App() {
             <Route path="/incubator" element={<Incubator />} />
             <Route path="/our-startups" element={<OurStartups />} />
             <Route path="/startups" element={<OurStartups />} />
-            
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/market-access" element={<MarketAccess />} />
             <Route path="/publications/magazines" element={<Magazines />} />
             <Route path="/publications/books" element={<Books />} />
+            <Route path="/contact" element={<Contact />} />
+            
+            {/* Split Market Access Routes */}
+            <Route path="/khedut-haat" element={<KhedutHaat />} />
+            <Route path="/khedut-haat-details" element={<KhedutHaatDetails />} />
+            <Route path="/sattvik" element={<Sattvik />} />
+            <Route path="/networking" element={<Networking />} />
+            <Route path="/incubatees" element={<Incubatees />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/growth-meet" element={<GrowthMeet />} />
           </Routes>
         </main>
 

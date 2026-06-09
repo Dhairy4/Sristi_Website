@@ -27,7 +27,7 @@ const Contact = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen font-sans text-gray-700">
-      
+
       {/* Page Header (Hero) */}
       <div className="relative bg-emerald-900 py-24 lg:py-32 overflow-hidden">
         {/* Background Image Overlay */}
@@ -39,7 +39,7 @@ const Contact = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/95 to-transparent"></div>
         </div>
-        
+
         {/* Header Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="px-4 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-semibold tracking-wider uppercase border border-emerald-500/30">
@@ -55,7 +55,7 @@ const Contact = () => {
       {/* Main Content Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
+
           {/* Column 1: Contact Information (5 cols) */}
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-4">
@@ -67,7 +67,7 @@ const Contact = () => {
 
             {/* Info Cards */}
             <div className="space-y-6">
-              
+
               {/* Phone Card */}
               <div className="flex items-start gap-4 bg-white border border-gray-150 p-6 rounded-2xl shadow-sm">
                 <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center flex-shrink-0">
@@ -134,9 +134,9 @@ const Contact = () => {
                 ].map((social, idx) => {
                   const Icon = social.icon;
                   return (
-                    <a 
+                    <a
                       key={idx}
-                      href={social.link} 
+                      href={social.link}
                       className={`w-10 h-10 rounded-xl bg-white border border-gray-150 flex items-center justify-center text-gray-400 hover:text-white hover:border-transparent ${social.color} transition-all duration-300 shadow-sm`}
                     >
                       <Icon size={18} />
@@ -165,7 +165,7 @@ const Contact = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Your Name</label>
@@ -237,16 +237,16 @@ const Contact = () => {
         {/* Map Embed Section */}
         <div className="mt-16 bg-white border border-gray-150 p-4 rounded-[2.5rem] shadow-sm">
           <div className="h-96 w-full rounded-[2rem] overflow-hidden">
-            <iframe 
+            <iframe
               title="SRISTI Innovations Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.6907409252327!2d72.54476637597147!3d23.035118779165183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1m3!1d0!2zMjPCsDAyJzA2LjQiTiA3MsKwMzInNTAuNCJF!5e0!3m2!1sen!2sin!4v1717670000000!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29372.29564240452!2d72.5455422!3d23.040767899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f53fffffff%3A0x29386d81d5488a17!2sSRISTI!5e0!3m2!1sen!2sin!4v1780988099283!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
+              allowfullscreen="" 
               style={{ border: 0 }} 
-              allowFullScreen="" 
               loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
           </div>
         </div>
 
