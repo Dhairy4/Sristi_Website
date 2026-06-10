@@ -6,11 +6,13 @@ import AboutUsSection from './components/landing/AboutUsSection';
 import WhatWeOfferSection from './components/landing/WhatWeOfferSection';
 import PromotionalBanners from './components/landing/PromotionalBanners';
 import OurStartupsSection from './components/landing/OurStartupsSection';
+import WhyChooseUsSection from './components/landing/WhyChooseUsSection';
 import AboutUs from './pages/AboutUs';
 import WhatWeOffer from './pages/WhatWeOffer';
 import OurStartups from './pages/OurStartups';
 import Incubator from './pages/Incubator';
 import Contact from './pages/Contact';
+import MarketAccess from './pages/MarketAccess';
 import Books from './pages/publications/Books';
 import Magazines from './pages/publications/Magazines';
 
@@ -31,6 +33,7 @@ const Home = () => (
     <WhatWeOfferSection />
     <PromotionalBanners />
     <OurStartupsSection />
+    <WhyChooseUsSection />
   </div>
 );
 
