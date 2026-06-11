@@ -196,7 +196,7 @@ const KhedutHaatDetails = () => {
     { 
       text: "Sarva Vidyalaya Kelavani Mandal (Kadi campus), Pharmacy Campus, Near GH-6 Circle, Gandhinagar", 
       img: locSarvaV,
-      mapLink: "https://maps.google.com/maps?q=6MR3%2B9XW%20Gandhinagar%2C%20Gujarat"
+      mapLink: "https://maps.app.goo.gl/iL7kxssScGb6B52J6"
     },
     { 
       text: "Babasaheb Ambedkar Open University (BAOU) Campus, Sarkhej-Gandhinagar Highway, Charodi, Ahmedabad", 

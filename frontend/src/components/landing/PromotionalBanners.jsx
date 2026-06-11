@@ -9,7 +9,7 @@ const Banner = ({ text, bgImage, contactUrl, readMoreUrl }) => {
   return (
     <div 
       className="relative w-full bg-slate-800 py-12 md:py-16 lg:py-20 overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url('${bgImage}')` }}
+      style={{ backgroundImage: `url('${bgImage}')`  }}
     >
       {/* Dark Overlay for Text Readability */}
       <div className="absolute inset-0 bg-black/60 z-10 pointer-events-none"></div>
@@ -26,7 +26,7 @@ const Banner = ({ text, bgImage, contactUrl, readMoreUrl }) => {
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center">
           <Link 
             to={contactUrl} 
-            className="px-8 py-3.5 bg-[#8bc34a] text-white font-semibold rounded-md hover:bg-[#7cb342] transition-colors shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-lime-500/50 text-center"
+            className="px-8 py-3.5 bg-emerald-600 text-white font-semibold rounded-md hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-emerald-500/50 text-center"
           >
             Contact Us
           </Link>
@@ -36,14 +36,14 @@ const Banner = ({ text, bgImage, contactUrl, readMoreUrl }) => {
               href={readMoreUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3.5 bg-[#8bc34a] text-white font-semibold rounded-md hover:bg-[#7cb342] transition-colors shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-lime-500/50 text-center"
+              className="px-8 py-3.5 bg-emerald-600 text-white font-semibold rounded-md hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-emerald-500/50 text-center"
             >
               Read More
             </a>
           ) : (
             <Link 
               to={readMoreUrl} 
-              className="px-8 py-3.5 bg-[#8bc34a] text-white font-semibold rounded-md hover:bg-[#7cb342] transition-colors shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-lime-500/50 text-center"
+              className="px-8 py-3.5 bg-emerald-600 text-white font-semibold rounded-md hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-emerald-500/50 text-center"
             >
               Read More
             </Link>
