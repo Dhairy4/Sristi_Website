@@ -113,7 +113,7 @@ const SristiHeroSlider = () => {
               <img
                 src={slide.imageSrc}
                 alt=""
-                className={`w-full h-full object-fit transform transition-transform duration-[12s] ease-out ${
+                className={`w-full h-full object-cover transform transition-transform duration-[12s] ease-out ${
                   isActive ? 'scale-110' : 'scale-100'
                 }`}
               />

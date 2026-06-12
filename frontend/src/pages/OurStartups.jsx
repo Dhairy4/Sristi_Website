@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { 
   Sprout, 
   Search, 
@@ -851,8 +852,25 @@ const OurStartups = () => {
   const [selectedSector, setSelectedSector] = useState('All');
   const [selectedSubcategory, setSelectedSubcategory] = useState('All');
   const [selectedStartup, setSelectedStartup] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const closeModal = () => {
+    setSelectedStartup(null);
+    setSearchParams({});
+  };
 
   const sectors = ['All', 'BioNest', 'Agri & Lifestyle Entrepreneur'];
+
+  // Handle URL query parameter startup modal trigger
+  useEffect(() => {
+    const startupId = searchParams.get('startup');
+    if (startupId) {
+      const startup = STARTUPS_DATA.find(s => s.id === parseInt(startupId, 10));
+      if (startup) {
+        setSelectedStartup(startup);
+      }
+    }
+  }, [searchParams]);
 
   // Reset subcategory filter when main category changes
   useEffect(() => {
@@ -1122,7 +1140,7 @@ const OurStartups = () => {
 
         return (
           <div 
-            onClick={() => setSelectedStartup(null)}
+            onClick={closeModal}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300 cursor-pointer"
           >
             <div 
@@ -1131,7 +1149,7 @@ const OurStartups = () => {
             >
               {/* Close Button */}
               <button
-                onClick={() => setSelectedStartup(null)}
+                onClick={closeModal}
                 className="absolute top-6 right-6 p-2.5 rounded-full bg-white/90 hover:bg-white border border-gray-200 text-gray-500 hover:text-emerald-600 transition-colors shadow-md cursor-pointer z-50"
               >
                 <X size={20} />

@@ -48,7 +48,7 @@ const AnimatedCounter = ({ end, suffix = "", duration = 2000 }) => {
   }, [isVisible, end, duration]);
 
   return (
-    <div ref={counterRef} className="text-4xl md:text-5xl font-bold text-[#8bc34a] mb-2">
+    <div ref={counterRef} className="text-4xl md:text-5xl font-bold text-emerald-600 mb-2">
       {count}{suffix}
     </div>
   );
@@ -72,7 +72,7 @@ const OurStartupsSection = () => {
           
           {/* Left Content Panel (Card Form) */}
           <div className="w-full lg:w-1/2 flex flex-col items-start bg-emerald-50/50 p-8 sm:p-10 rounded-[2rem] shadow-xl shadow-emerald-900/5 border border-emerald-100/50">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#8bc34a] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-emerald-600 mb-6">
               Our Startups
             </h2>
             
@@ -82,7 +82,7 @@ const OurStartupsSection = () => {
             
             <Link 
               to="/startups" 
-              className="px-8 py-3 bg-[#8bc34a] text-white font-semibold rounded hover:bg-[#7cb342] transition-colors shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-lime-500/50"
+              className="px-8 py-3 bg-emerald-600 text-white font-semibold rounded hover:bg-emerald-700 transition-colors shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-emerald-500/50"
             >
               About Startup
             </Link>
@@ -99,7 +99,7 @@ const OurStartupsSection = () => {
             </div>
           </div>
 
-        </div>
+         </div>
 
         {/* Animated Stats Section (No Background) */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-12 lg:gap-y-0 text-center pt-16 mt-4 border-t border-gray-200 lg:divide-x divide-gray-200">
@@ -108,7 +108,7 @@ const OurStartupsSection = () => {
               <AnimatedCounter end={stat.end} suffix={stat.suffix} />
               
               {/* Subtle accent divider */}
-              <div className="w-10 h-1 bg-[#8bc34a]/30 rounded-full my-4"></div>
+              <div className="w-10 h-1 bg-emerald-600/30 rounded-full my-4"></div>
               
               <p className="text-gray-500 font-bold text-xs sm:text-sm tracking-widest uppercase leading-snug">
                 {stat.label}

@@ -1,4 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+const linkMap = {
+  "Internship Program": "/what-we-offer#internship",
+  "Sattvik": "/sattvik",
+  "Khedut Haat": "/khedut-haat",
+  "Advisory and Mentoring": "/what-we-offer#advisory",
+  "Funding Support": "/what-we-offer#funding",
+  "Infrastructure Support": "/what-we-offer#infrastructure",
+  "Marketing Support": "/what-we-offer#marketing",
+  "Networking and Events": "/networking",
+  "IPR Support": "/what-we-offer#ipr",
+  "Resource & Facilities": "/resources"
+};
 
 const offerData = [
   {
@@ -63,15 +77,15 @@ const WhatWeOfferSection = () => {
                   const needsTopBorder = card.columns === 1 ? index > 0 : index >= 2;
                   
                   return (
-                    <a 
-                      href="#" 
+                    <Link 
+                      to={linkMap[link] || "/what-we-offer"} 
                       key={index} 
                       className={`block py-3 text-emerald-600 text-sm font-medium hover:text-emerald-800 transition-colors ${
                         needsTopBorder ? 'border-t border-gray-300/80' : ''
                       }`}
                     >
                       {link}
-                    </a>
+                    </Link>
                   );
                 })}
               </div>

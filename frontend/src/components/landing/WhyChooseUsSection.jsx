@@ -19,14 +19,14 @@ const WhyChooseUsSection = () => {
           
           {/* Left: List */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#8bc34a] mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-emerald-600 mb-8">
               Why you choose SRISTI Innovations
             </h2>
             
             <ul className="space-y-5">
               {listItems.map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <Check className="w-6 h-6 text-[#8bc34a] mr-3 shrink-0 mt-0.5" />
+                  <Check className="w-6 h-6 text-emerald-600 mr-3 shrink-0 mt-0.5" />
                   <span className="text-gray-600 text-[15px] sm:text-base">{item}</span>
                 </li>
               ))}
@@ -55,7 +55,7 @@ const WhyChooseUsSection = () => {
           
           {/* News */}
           <div className="w-full lg:w-1/2">
-            <h2 className="text-2xl font-bold text-[#8bc34a] mb-6">News</h2>
+            <h2 className="text-2xl font-bold text-emerald-600 mb-6">News</h2>
             <ul className="list-disc pl-5 text-gray-600 space-y-3">
               <li className="text-[15px] sm:text-base leading-relaxed">
                 SRISTI's Prakrutik Khedut Haat on every Thursday and Sunday from 6:30 AM to 10:30 AM.
@@ -65,7 +65,7 @@ const WhyChooseUsSection = () => {
 
           {/* Events */}
           <div className="w-full lg:w-1/2">
-            <h2 className="text-2xl font-bold text-[#8bc34a] mb-6">Events</h2>
+            <h2 className="text-2xl font-bold text-emerald-600 mb-6">Events</h2>
             <p className="text-gray-600 text-[15px] sm:text-base leading-relaxed">
               Sattvik Food Festival - 23rd to 26th December at Bhagwat Vidyapeeth. Do visit for eating Sattvik Food.
             </p>
