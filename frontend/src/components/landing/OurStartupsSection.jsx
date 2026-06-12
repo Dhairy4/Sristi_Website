@@ -84,7 +84,7 @@ const OurStartupsSection = () => {
               to="/startups" 
               className="px-8 py-3 bg-[#8bc34a] text-white font-semibold rounded hover:bg-[#7cb342] transition-colors shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-lime-500/50"
             >
-              Read More
+              About Startup
             </Link>
           </div>
 

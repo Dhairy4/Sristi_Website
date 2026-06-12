@@ -535,7 +535,192 @@ const STARTUPS_DATA = [
     "category": "BioNest",
     "subcategory": "Active",
     "image_url": ""
+  },
+  {
+    "id": 36,
+    "startup_name": "Barley Water",
+    "ownername": "Ashok Upadhyay",
+    "description": "Barley is a wellness-focused social media platform that shares content related to healthy living, barley-based nutrition, natural health awareness, and lifestyle improvement. The page appears to promote wellness-oriented products and health education aimed at encouraging a balanced and health-conscious lifestyle. Content includes product information, health tips, motivational posts, and community engagement around natural nutrition and everyday wellness.",
+    "startup_website": "",
+    "contact_no": "9825051457",
+    "social_links": {},
+    "logo_initials": "BW",
+    "category": "Food and beverages",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 37,
+    "startup_name": "Brooks and Blooms",
+    "ownername": "Arjun Thakkar",
+    "description": "Brook and Blooms appears to represent a sustainability-focused initiative and eco-conscious brand dedicated to transforming temple flower waste into meaningful and environmentally friendly products. Based in Ahmedabad, the initiative promotes environmental responsibility through innovative recycling practices while supporting social impact and sustainable living. The platform shares updates related to natural products, sustainability awareness, community initiatives, and eco-friendly innovations designed to reduce floral waste pollution. It also highlights efforts toward employment generation and responsible resource utilization, encouraging people to adopt greener practices and support environmentally conscious products and lifestyles.",
+    "startup_website": "",
+    "contact_no": "8980200305",
+    "social_links": {},
+    "logo_initials": "BB",
+    "category": "Environmental science",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 38,
+    "startup_name": "Amhidda Care",
+    "ownername": "Hiral Parikh",
+    "description": "Amhidda Care is a personal care brand dedicated to offering high-quality hair care, skin care, and body care products made with carefully selected ingredients. The brand focuses on providing effective daily care solutions that help maintain healthy skin, strong hair, and overall personal wellness. Its product range includes hair oils, shampoos, face washes, soaps, and other self-care essentials suitable for everyday use. With a commitment to quality and customer satisfaction, Amhidda Care combines traditional wellness principles with modern product development. The brand aims to make reliable and affordable personal care products accessible to consumers while promoting a healthy and confident lifestyle through its diverse range of beauty and wellness solutions.",
+    "startup_website": "https://amhiddacare.com/",
+    "contact_no": "9427806304, 9925017561",
+    "social_links": {},
+    "logo_initials": "AC",
+    "category": "Herbal beauty products",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 39,
+    "startup_name": "Algallio Biotech",
+    "ownername": "Amee Patel",
+    "description": "Algallio Biotech Pvt. Ltd. is a biotechnology-based company focused on developing innovative nutritional and wellness products derived from microalgae, particularly Spirulina. Established with the vision of addressing nutritional deficiencies through sustainable and natural solutions, the company offers a range of health-focused food and beverage products designed to support overall well-being. Its product portfolio includes Spirulina powder, Spirulina drink mixes, green tea blends, healthy soups, coconut water-based beverages, and other nutrient-rich formulations. Driven by research, innovation, and sustainability, Algallio Biotech aims to make the benefits of microalgae accessible through convenient and great-tasting products. The company combines scientific expertise with natural ingredients to promote healthier lifestyles while contributing to the growing demand for functional foods and wellness solutions. Based in Vadodara, Gujarat, Algallio Biotech continues to expand its presence in the health and nutrition sector through its commitment to quality and product development.",
+    "startup_website": "http://www.algalliobiotech.com/",
+    "contact_no": "9879311365",
+    "social_links": {
+      "facebook": "https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.algalliobiotech.com%2F"
+    },
+    "logo_initials": "AB",
+    "category": "Food Technology",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 40,
+    "startup_name": "Mom's Café",
+    "ownername": "Neela Nagar",
+    "description": "Mom’s Café is a health-focused food venture developing innovative bakery and snack products using nutritious alternative flours such as rajgira (amaranth), moraiyo (barnyard millet), and singhada (water chestnut) in place of refined wheat flour (maida). The idea originated from the need to create tasty bakery products that could be consumed during fasting periods while also offering healthier alternatives to conventional baked foods. Through continuous experimentation, the venture has developed a range of cakes, breads, snacks, and other bakery products that combine traditional ingredients with modern food preferences. The company aims to serve health-conscious consumers, individuals with gluten sensitivities, and people seeking nutritious alternatives for managing lifestyle-related conditions such as diabetes, cholesterol, and blood pressure. By replacing refined ingredients with wholesome traditional grains and avoiding artificial additives, the venture seeks to promote healthier eating habits while preserving taste, texture, and product quality.",
+    "startup_website": "",
+    "contact_no": "9825119365",
+    "social_links": {},
+    "logo_initials": "MC",
+    "category": "Food Technology",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 41,
+    "startup_name": "Greenshalla, ecoclub",
+    "ownername": "mukesh chauhan",
+    "description": "",
+    "startup_website": "",
+    "contact_no": "",
+    "social_links": {},
+    "logo_initials": "GE",
+    "category": "Environmental science",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 42,
+    "startup_name": "Xylooligosaccharide (XOS) nutraceutical platform",
+    "ownername": "Dr. G. Shyamsunder Reddy",
+    "description": "The company is developing a high-purity Xylooligosaccharide (XOS) nutraceutical platform using agricultural residues such as sugarcane, sorghum, corn, and bajra bagasse. Originally developed through research at IIT Madras and further advanced at SIIE-SRISTI BioNEST, the technology converts low-value agricultural biomass into premium prebiotic ingredients that support gut health and promote the growth of beneficial intestinal bacteria. The process utilizes proprietary enzymatic and biotechnological methods to produce highly purified XOS with superior prebiotic efficacy compared to conventional alternatives. The product is intended for applications across the nutraceutical, pharmaceutical, food, and beverage industries, where it can be incorporated into dietary supplements, functional foods, health drinks, and therapeutic formulations. By transforming agricultural waste into high-value health ingredients, the technology offers a sustainable and cost-effective solution for improving digestive health while creating additional value from agricultural by-products. With growing demand for prebiotics and gut-health products, the venture aims to establish an indigenous manufacturing platform for high-quality XOS and reduce dependence on imports in the Indian market.",
+    "startup_website": "",
+    "contact_no": "9177329341",
+    "social_links": {},
+    "logo_initials": "XN",
+    "category": "Agriculture and life sciences",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 43,
+    "startup_name": "GRASSROOTS Innovators-SRISTI",
+    "ownername": "Bhartiben Patel",
+    "description": "The enterprise is a women-led rural food processing venture focused on producing traditional millet-based and indigenous food products from the Dang district of Gujarat. Operating through a self-help group model, the venture specializes in value-added products such as finger millet (nagli/ragi) papad, chakri, bhurji, and other regional delicacies prepared using traditional methods and locally sourced ingredients. Established with the objective of creating sustainable livelihoods for rural women, the enterprise combines traditional food knowledge with community-based entrepreneurship. Its flagship millet papad products promote healthy and nutritious dietary alternatives while creating market opportunities for local agricultural produce. By empowering women through collective production and marketing, the venture contributes to rural economic development, preservation of traditional food practices, and promotion of nutritious millet-based foods among consumers.",
+    "startup_website": "",
+    "contact_no": "9099886155, 9898429745",
+    "social_links": {},
+    "logo_initials": "GI",
+    "category": "Nutrient Food science",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 44,
+    "startup_name": "Nutrient Dynamic Food",
+    "ownername": "Arpita Doshi",
+    "description": "Nutrition Dynamic Foods LLP (NDF) is a nutrition-focused food innovation company dedicated to developing functional and plant-based food products that support health and wellness. The company combines modern food technology with traditional nutritional wisdom to create value-added products designed to address changing lifestyle needs and promote better overall well-being. Its product development approach emphasizes innovation, quality, and scientifically driven nutritional solutions. Focused on research, sustainability, and health-conscious living, Nutrition Dynamic Foods works on creating nutrient-rich formulations using advanced processing techniques and natural ingredients. The company is committed to delivering innovative food products that contribute to nutrition security while supporting healthier lifestyles through functional foods and wellness-oriented solutions.",
+    "startup_website": "",
+    "contact_no": "7383547240",
+    "social_links": {},
+    "logo_initials": "ND",
+    "category": "Food Microbiology",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 45,
+    "startup_name": "GRASSROOTS Innovators-SRISTI",
+    "ownername": "Rita ben Vora",
+    "description": "",
+    "startup_website": "",
+    "contact_no": "",
+    "social_links": {},
+    "logo_initials": "GI",
+    "category": "Human therapeutic",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 46,
+    "startup_name": "Kama International Organic Pvt. Ltd.",
+    "ownername": "Haresh Patel",
+    "description": "Kama Organic is a leading organic agriculture brand dedicated to providing innovative and sustainable farming solutions. The company offers a wide range of organic fertilizers, bio-pesticides, fungicides, soil enhancers, pest control solutions, and crop nutrition products designed to improve soil health, increase crop productivity, and support chemical-free farming practices. With a strong focus on research and farmer-centric innovation, the brand promotes environmentally responsible agriculture across India. Committed to advancing sustainable farming, Kama Organic combines traditional agricultural knowledge with modern organic technologies to help farmers achieve healthier yields and long-term soil fertility. Through its extensive product portfolio and educational initiatives, the company continues to empower farming communities while contributing to the growth of eco-friendly and regenerative agriculture.",
+    "startup_website": "https://kamaorganic.com/",
+    "contact_no": "",
+    "social_links": {},
+    "logo_initials": "KI",
+    "category": "Agriculture",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 47,
+    "startup_name": "Connect Nature",
+    "ownername": "Bhartiben Banker",
+    "description": "Connect Nature is a social enterprise dedicated to promoting and marketing traditional handcrafted products created by rural and tribal artisans, particularly from the Dang district of Gujarat. The initiative works closely with local communities to bring indigenous art, bamboo crafts, wooden products, and other traditional creations to wider markets while ensuring that the economic benefits reach the original knowledge holders and artisans. The enterprise aims to preserve traditional craftsmanship by creating sustainable livelihood opportunities for rural communities through market access, product promotion, and customer awareness. By connecting consumers with authentic handmade products and supporting grassroots artisans, Connect Nature contributes to cultural preservation, rural entrepreneurship, and inclusive economic development while encouraging the appreciation of traditional arts and crafts.",
+    "startup_website": "",
+    "contact_no": "",
+    "social_links": {},
+    "logo_initials": "CN",
+    "category": "",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 48,
+    "startup_name": "Bijora Candy",
+    "ownername": "Nilesh Patel",
+    "description": "",
+    "startup_website": "",
+    "contact_no": "9998672096",
+    "social_links": {},
+    "logo_initials": "BC",
+    "category": "",
+    "subcategory": "Exit",
+    "image_url": ""
+  },
+  {
+    "id": 49,
+    "startup_name": "IOTA",
+    "ownername": "Vaibhav Shitole",
+    "description": "IOTA Diagnostic is a healthcare innovation company focused on making diagnostics affordable, accessible and convenient through deep-tech medical solutions. The company develops user-friendly, home-based diagnostic technologies that enable individuals to access reliable healthcare testing without the need for complex hospital visits. Driven by the vision of improving healthcare accessibility for everyone, IOTA Diagnostic combines advanced technology, scientific research and patient-centered innovation to create simple, effective and scalable diagnostic solutions. Their flagship innovations include M-Strip™, India’s first affordable at-home HPV screening kit using menstrual blood and BioSampler™, a smart sample collection device designed for safe and convenient transport of blood and body fluid samples. Backed by trusted institutions such as IIM-A Ventures, BIRAC-DBT (Government of India), DST-STBI Vadodara, I-Hub Gujarat, SRISTI Innovations, Villgro Foundation and EDII Ahmedabad, the company is on a mission to make diagnostics more accessible, human-centric and scalable for people across urban and rural communities. IOTA Diagnostic is committed to building sustainable, affordable and high-quality healthcare technologies that empower early disease detection, improve preventive healthcare and make quality diagnostics available to everyone.",
+    "startup_website": "https://iotadiagnostic.com/",
+    "contact_no": "9096323869",
+    "social_links": {},
+    "logo_initials": "IO",
+    "category": "",
+    "subcategory": "Exit",
+    "image_url": ""
   }
+
 ];
 
 const logoModules = import.meta.glob('../assets/our_startup/logo/*.{png,jpg,jpeg,svg,webp}', { eager: true });
@@ -556,17 +741,35 @@ const productUrls = Object.keys(productModules).reduce((acc, key) => {
 const LOGO_OVERRIDES = {
   "Ayurvidhan research and development": "neti_neti.png",
   "Samrudhdhyog Venture - AAYUVEDA": "aayuveda.png",
+  "Samrudhdhyog  AAYUVEDA": "aayuveda.png",
   "Sattvanik honey": "sattvahik.png",
   "Freni natural (SR Natural)": "ferni_natural.png",
   "Ambika": "ambica.png",
   "Kapes Care": "kapscare.png",
   "Prachin Jadibutti": "prachin_jadibuti.png",
-  "Rusi Herbal Ayurveda": "rishi_herbal_ayurveda.png"
+  "Rusi Herbal Ayurveda": "rishi_herbal_ayurveda.png",
+  "Barley Water": "Barley_water_works.png",
+  "Brooks and Blooms": "Brook&blooms.jpeg",
+  "Nutrient Dynamic Food": "NDF.png",
+  "Bijora Candy": "byora_candy.png",
+  "JB enterprise": "jb_enterprize.png",
+  "Krushimool": "krishimool.png",
+  "Colostrum": "radiom_heal.png"
 };
 
 const PRODUCT_ALIASES = {
   "Sattvanik honey": ["sattvahik", "sattvhik"],
-  "Samrudhdhyog Venture - AAYUVEDA": ["aayuveda", "aayuveda1", "aayuveda2"]
+  "Samrudhdhyog Venture - AAYUVEDA": ["aayuveda", "aayuveda1", "aayuveda2"],
+  "Affinito": ["affinito", "affinitio"],
+  "Chandramauli Ayurveda": ["chandramauli", "chanramauli"],
+  "JB enterprise": ["jb_enterprize", "jb_enterpize"],
+  "Freni natural (SR Natural)": ["ferni_natural", "freni_natural"],
+  "Ambika": ["ambica", "ambika"],
+  "Ayurvidhan research and development": ["neti_neti"],
+  "Nisarg Organics": ["nisarg_organic_farm", "nisarg"],
+  "H-Motive": ["hmotive", "h_motive"],
+  "Kapes Care": ["kapescare", "kapscare"],
+  "Krushimool": ["krishimool"]
 };
 
 const getLogoForStartup = (startup) => {
@@ -663,8 +866,8 @@ const OurStartups = () => {
                             (startup.description || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
                             (startup.ownername || '').toLowerCase().includes(searchTerm.toLowerCase());
       
-      const isBioNest = (startup.category || '').toLowerCase() === 'bionest';
       const isAgri = (startup.category || '').toLowerCase().includes('agri') || (startup.category || '').toLowerCase().includes('lifestyle');
+      const isBioNest = !isAgri;
 
       let matchesSector = false;
       if (selectedSector === 'All') {
@@ -673,6 +876,12 @@ const OurStartups = () => {
         if (isBioNest) {
           if (selectedSubcategory === 'All') {
             matchesSector = true;
+          } else if (selectedSubcategory === 'Active') {
+            const sub = (startup.subcategory || '').toLowerCase();
+            matchesSector = sub === 'active' || sub === '';
+          } else if (selectedSubcategory === 'Exit') {
+            const sub = (startup.subcategory || '').toLowerCase();
+            matchesSector = sub === 'exit' || sub === 'exited';
           } else {
             matchesSector = (startup.subcategory || '').toLowerCase() === selectedSubcategory.toLowerCase();
           }
@@ -820,7 +1029,7 @@ const OurStartups = () => {
             <div className="flex items-center gap-3 pt-4 border-t border-gray-100 animate-in fade-in slide-in-from-top-2 duration-300">
               <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">BioNEST Status:</span>
               <div className="flex gap-2">
-                {['All', 'Active', 'Exited'].map((sub) => (
+                {['All', 'Active', 'Exit'].map((sub) => (
                   <button
                     key={sub}
                     onClick={() => setSelectedSubcategory(sub)}
@@ -842,15 +1051,13 @@ const OurStartups = () => {
         {filteredStartups.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredStartups.map((startup, index) => {
-              // Stagger floating animations based on index
-              const animClass = FLOATING_ANIMATIONS[index % FLOATING_ANIMATIONS.length];
               const logoUrl = getLogoForStartup(startup);
 
               return (
                 <div
                   key={startup.id}
                   onClick={() => setSelectedStartup(startup)}
-                  className={`bg-white/95 border border-gray-200 rounded-[2.5rem] p-8 flex flex-col justify-between transition-all duration-500 hover:scale-[1.03] hover:border-emerald-300 hover:shadow-[0_10px_30px_rgba(16,185,129,0.08)] pause-float-on-hover cursor-pointer ${animClass}`}
+                  className="bg-white/95 border border-gray-200 rounded-[2.5rem] p-8 flex flex-col justify-between transition-all duration-500 hover:scale-[1.03] hover:border-emerald-300 hover:shadow-[0_10px_30px_rgba(16,185,129,0.08)] cursor-pointer"
                 >
                   <div>
                     {/* Header: Brand Logo */}
@@ -891,8 +1098,7 @@ const OurStartups = () => {
                       }}
                       className="w-full py-3.5 px-4 bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 font-bold rounded-2xl text-center transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-sm text-sm"
                     >
-                       About Startup
-                      <ArrowUpRight size={16} />
+                      About Startup
                     </button>
                   </div>
                 </div>
@@ -911,59 +1117,68 @@ const OurStartups = () => {
       {selectedStartup && (() => {
         const startupLogoUrl = getLogoForStartup(selectedStartup);
         const startupProducts = getProductsForStartup(selectedStartup);
-        const modalBannerUrl = selectedStartup.image_url || (startupProducts.length > 0 ? startupProducts[0] : 'https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        const hasBanner = !!(selectedStartup.image_url || startupProducts.length > 0);
+        const modalBannerUrl = selectedStartup.image_url || (startupProducts.length > 0 ? startupProducts[0] : null);
 
         return (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300">
-            <div className="relative bg-white border border-gray-200 rounded-[2.5rem] w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-200">
-              
+          <div 
+            onClick={() => setSelectedStartup(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300 cursor-pointer"
+          >
+            <div 
+              onClick={(e) => e.stopPropagation()}
+              className="relative bg-white border border-gray-250 rounded-[2.5rem] w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-200 cursor-default"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedStartup(null)}
+                className="absolute top-6 right-6 p-2.5 rounded-full bg-white/90 hover:bg-white border border-gray-200 text-gray-500 hover:text-emerald-600 transition-colors shadow-md cursor-pointer z-50"
+              >
+                <X size={20} />
+              </button>
+
               {/* Scrollable Container */}
               <div className="flex-1 overflow-y-auto">
                 
-                {/* Modal Image Header */}
-                <div className="h-64 md:h-96 relative">
-                  <img 
-                    src={modalBannerUrl} 
-                    alt={selectedStartup.startup_name} 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/25 to-transparent"></div>
-                  <button
-                    onClick={() => setSelectedStartup(null)}
-                    className="absolute top-6 right-6 p-2.5 rounded-full bg-white/90 hover:bg-white border border-gray-200 text-gray-500 hover:text-emerald-600 transition-colors shadow-sm cursor-pointer"
-                  >
-                    <X size={20} />
-                  </button>
-
-                  <div className="absolute bottom-6 left-6 md:left-10 flex items-center gap-4">
-                    {startupLogoUrl && (
-                      <div className="w-16 h-16 rounded-2xl bg-white border border-gray-250 flex items-center justify-center p-2 shadow-md flex-shrink-0">
-                        <img 
-                          src={startupLogoUrl} 
-                          alt={`${selectedStartup.startup_name} Logo`} 
-                          className="w-full h-full object-contain rounded-lg"
-                        />
-                      </div>
-                    )}
-                    <div>
-                      <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-600 text-white shadow-md shadow-emerald-650/20 uppercase tracking-wider">
-                        {selectedStartup.category} {selectedStartup.subcategory ? `• ${selectedStartup.subcategory}` : ''}
-                      </span>
-                      <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">{selectedStartup.startup_name}</h2>
-                    </div>
+                {/* Modal Header Banner */}
+                {hasBanner && (
+                  <div className="relative h-64 md:h-96 flex-shrink-0 border-b border-gray-100">
+                    <img 
+                      src={modalBannerUrl} 
+                      alt={selectedStartup.startup_name} 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                </div>
+                )}
 
                 {/* Modal Body Content */}
                 <div className="p-6 md:p-10 space-y-8">
                   
-                  {/* 1 & 2: Startup Name & Owner name */}
+                  {/* Startup Name & Owner name */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6 border-b border-gray-100">
-                    <div>
-                      <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Startup name</h4>
-                      <p className="text-xl font-bold text-gray-900">{selectedStartup.startup_name}</p>
+                    <div className="flex items-center gap-4 pr-8">
+                      {startupLogoUrl && (
+                        <div className="w-16 h-16 rounded-2xl bg-white border border-gray-200 flex items-center justify-center p-2 shadow-sm flex-shrink-0">
+                          <img 
+                            src={startupLogoUrl} 
+                            alt={`${selectedStartup.startup_name} Logo`} 
+                            className="w-full h-full object-contain rounded-lg"
+                          />
+                        </div>
+                      )}
+                      <div>
+                        <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Startup name</h4>
+                        <p className="text-xl font-bold text-gray-900">{selectedStartup.startup_name}</p>
+                        {(selectedStartup.category || selectedStartup.subcategory) && (
+                          <div className="mt-1 flex flex-wrap gap-1.5">
+                            <span className="px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-250 uppercase tracking-wider">
+                              {selectedStartup.category} {selectedStartup.subcategory ? `• ${selectedStartup.subcategory}` : ''}
+                            </span>
+                          </div>
+                        )}
+                      </div>
                     </div>
-                    <div>
+                    <div className="md:pr-12">
                       <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Owner Name</h4>
                       <p className="text-xl font-bold text-gray-900 flex items-center gap-2">
                         <User size={20} className="text-emerald-600" />
@@ -980,10 +1195,8 @@ const OurStartups = () => {
                     </p>
                   </div>
 
-                  {/* Product Showcase */}
                   {startupProducts && startupProducts.length > 0 && (
-                    <div className="space-y-4 pt-2">
-                      <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider">Product Showcase</h4>
+                    <div className="pt-2">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {startupProducts.map((prodUrl, idx) => (
                           <div 
@@ -1092,26 +1305,6 @@ const OurStartups = () => {
                   )}
 
                 </div>
-              </div>
-
-              {/* Modal Bottom Sticky Controls */}
-              <div className="bg-gray-50 px-6 md:px-10 py-5 border-t border-gray-150 flex justify-end gap-3 flex-shrink-0">
-                <button
-                  onClick={() => setSelectedStartup(null)}
-                  className="px-6 py-2.5 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold rounded-xl transition-colors cursor-pointer text-sm"
-                >
-                  Close
-                </button>
-                {selectedStartup.startup_website && (
-                  <a 
-                    href={selectedStartup.startup_website.startsWith('http') ? selectedStartup.startup_website : `https://${selectedStartup.startup_website}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl transition-colors shadow-sm cursor-pointer text-sm"
-                  >
-                    Launch Project
-                  </a>
-                )}
               </div>
 
             </div>
