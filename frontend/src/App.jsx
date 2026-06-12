@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import SristiHeroSlider from './components/ui/SristiHeroSlider';
@@ -29,6 +30,18 @@ import GrowthMeet from './pages/GrowthMeet';
 import ProductsAndTechnology from './pages/ProductsAndTechnology';
 import ProductDetail from './pages/ProductDetail';
 
+// Inline Scroll Restorer Component
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // Instantly snaps window scroll coordinates to the top-left corner
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 // Placeholder Pages for Task 1
 const Home = () => (
   <div>
@@ -44,13 +57,16 @@ const Home = () => (
 function App() {
   return (
     <Router>
+      {/* Scroll to top wrapper added here to intercept route changes */}
+      <ScrollToTop />
+
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Navbar />
         
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutUs />} />
+            <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/what-we-offer" element={<WhatWeOffer />} />
             <Route path="/incubator" element={<Incubator />} />
             <Route path="/our-startups" element={<OurStartups />} />

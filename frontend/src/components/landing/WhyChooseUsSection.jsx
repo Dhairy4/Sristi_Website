@@ -39,7 +39,7 @@ const WhyChooseUsSection = () => {
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/ytD_vHM1VGU?autoplay=1" 
+                src="https://www.youtube.com/embed/ytD_vHM1VGU?autoplay=1&mute=1" 
                
                 title="BioNEST Honey Bee" 
                 frameBorder="0" 
