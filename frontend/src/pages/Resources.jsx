@@ -38,15 +38,35 @@ const Resources = () => {
 
       <section className="relative z-20 -mt-12 md:-mt-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] border border-gray-100 text-center">
-           <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 mb-8 shadow-sm mx-auto">
-              <FileImage size={28} />
-           </div>
+          
            
-           <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-8">RESOURCES AND FACILITIES</h2>
-           <div className="space-y-6 text-gray-600 leading-relaxed text-lg font-medium">
-             <p className="italic text-gray-400 border border-gray-200 p-8 rounded-2xl bg-gray-50 border-dashed">
-                (Photos from SRISTI will be displayed here)
-             </p>
+           <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-12">RESOURCES AND FACILITIES</h2>
+           
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+             {[
+               "https://sristiinnovations.com/wp-content/uploads/2023/08/WhatsApp-Image-2020-11-17-at-16.13.04-1-300x225.jpg",
+               "https://sristiinnovations.com/wp-content/uploads/2023/08/WhatsApp-Image-2020-11-17-at-16.13.08-2-300x225.jpg",
+               "https://sristiinnovations.com/wp-content/uploads/2023/08/WhatsApp-Image-2020-11-17-at-16.13.14-300x225.jpg",
+               "https://sristiinnovations.com/wp-content/uploads/2023/08/WhatsApp-Image-2020-11-17-at-16.12.59-300x225.jpg",
+               "https://sristiinnovations.com/wp-content/uploads/2023/08/Screenshot-2021-02-13-at-12.15.20-PM-300x169.jpg",
+               "https://sristiinnovations.com/wp-content/uploads/2023/08/Screenshot-2021-02-13-at-12.16.40-PM-300x167.jpg",
+               "https://sristiinnovations.com/wp-content/uploads/2023/08/Screenshot-2021-02-13-at-12.18.37-PM-300x167.jpg",
+               "https://sristiinnovations.com/wp-content/uploads/2023/08/Screenshot-2021-02-13-at-12.20.21-PM-300x167.jpg",
+               "https://sristiinnovations.com/wp-content/uploads/2023/08/Screenshot-2021-02-13-at-12.04.07-PM-300x169.jpg"
+             ].map((imgSrc, idx) => (
+               <motion.div 
+                 key={idx} 
+                 whileHover={{ y: -5 }}
+                 className="rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 bg-gray-50"
+               >
+                 <img 
+                   src={imgSrc.replace('-300x225', '').replace('-300x169', '').replace('-300x167', '')} 
+                   onError={(e) => { e.target.onerror = null; e.target.src = imgSrc; }}
+                   alt={`Facility ${idx + 1}`} 
+                   className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-500" 
+                 />
+               </motion.div>
+             ))}
            </div>
         </motion.div>
       </section>

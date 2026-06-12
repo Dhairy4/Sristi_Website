@@ -25,7 +25,7 @@ import Networking from './pages/Networking';
 import Incubatees from './pages/Incubatees';
 import Resources from './pages/Resources';
 import GrowthMeet from './pages/GrowthMeet';
-
+import GrowthMeetGallery from './pages/GrowthMeetGallery';
 // Imported Products and Technology Page
 import ProductsAndTechnology from './pages/ProductsAndTechnology';
 import ProductDetail from './pages/ProductDetail';
@@ -88,6 +88,7 @@ function App() {
             <Route path="/incubatees" element={<Incubatees />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/growth-meet" element={<GrowthMeet />} />
+            <Route path="/growth-meet-gallery" element={<GrowthMeetGallery />} />
           </Routes>
         </main>
 

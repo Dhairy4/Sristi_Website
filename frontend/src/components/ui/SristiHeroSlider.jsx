@@ -2,6 +2,8 @@ import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import growthmeet from '../../assets/Growth_Meet.jpeg';
+
 const slidesData = [
   {
     id: 1,
@@ -40,7 +42,7 @@ const slidesData = [
   },
   {
     id: 6,
-    imageSrc: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80',
+    imageSrc: growthmeet,
     title: 'STARTUP GROWTH MEET',
     ctaLink: '/growth-meet',
     ctaText: 'Join the Meet',
@@ -111,7 +113,7 @@ const SristiHeroSlider = () => {
               <img
                 src={slide.imageSrc}
                 alt=""
-                className={`w-full h-full object-cover transform transition-transform duration-[12s] ease-out ${
+                className={`w-full h-full object-fit transform transition-transform duration-[12s] ease-out ${
                   isActive ? 'scale-110' : 'scale-100'
                 }`}
               />
