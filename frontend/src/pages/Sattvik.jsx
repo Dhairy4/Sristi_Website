@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import forestAsset from "../assets/forest.jpeg";
 
 const fadeUp = {
@@ -37,10 +37,8 @@ const Sattvik = () => {
       </div>
 
       <section className="relative z-20 -mt-12 md:-mt-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] border border-gray-100">
-           <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 mb-8 shadow-sm">
-              <Users size={28} />
-           </div>
+           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] border border-gray-100">
+             
            <div className="aspect-[21/9] w-full rounded-2xl overflow-hidden mb-12 shadow-lg">
              <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&q=80" alt="Sattvik" className="w-full h-full object-cover" />
            </div>
@@ -50,6 +48,11 @@ const Sattvik = () => {
              <p>The Sattvik Traditional Food Festival is a flagship community celebration organized annually by SRISTI in collaboration with the Honey Bee Network. Established over two decades ago in Ahmedabad, Gujarat, this festival was born out of a deep reverence for India’s traditional knowledge, agro-biodiversity and the unyielding spirit of grassroots innovators and organic farmers across the nation.</p>
              <p>Sattvik envisages creating a harmonious bridge between conscious urban consumers and the custodians of our rural heritage. The festival provides a vibrant marketplace and a collaborative platform for farmers, tribal communities and local artisans to showcase nutrient-rich, forgotten crops such as minor millets, grains and wild uncultivated vegetables and transform them into wholesome, traditional culinary delicacies.</p>
              <p>Beyond celebrating the flavors of our roots, Sattvik offers comprehensive visibility and support to rural minds by hosting a dedicated grassroots innovation exhibition and an Khedut haat. By blending the warmth of regional food traditions with the brilliance of indigenous ingenuity, the festival fosters a sustainable ecosystem that promotes nutritional health, ensures fair economic returns to marginalized farmers and preserves India’s rich cultural and ecological diversity for generations to come.</p>
+            <div className="pt-6">
+                <Link to="https://sattvik.sristi.org/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 bg-emerald-600 border border-transparent rounded-full hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-600 shadow-md hover:shadow-lg">
+                  Visit Sattvik
+                </Link>
+          </div>
            </div>
         </motion.div>
       </section>
