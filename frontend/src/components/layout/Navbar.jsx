@@ -5,7 +5,7 @@ import sristiLogo from '../../assets/Sristi-innovation-logo.jpg';
 
 const navItems = [
   { name: 'Home', path: '/' },
-  { name: 'About us', path: '/about' },
+  { name: 'About us', path: '/aboutus' },
   { name: 'What We Offer', path: '/what-we-offer' },
   { name: 'Our Startups', path: '/our-startups' },
   { name: 'Products', path: '/products-technology' }, // Updated to match App.jsx path perfectly
