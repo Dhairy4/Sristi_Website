@@ -84,7 +84,7 @@ const AboutUsSection = () => {
               }`}
             >
               <Link 
-                to="/about" 
+                to="/aboutus" 
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-emerald-700 text-white font-bold text-lg rounded-full hover:bg-emerald-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-emerald-500/50"
               >
                 Read More

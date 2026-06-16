@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -13,7 +13,7 @@ import WhatWeOffer from './pages/WhatWeOffer';
 import OurStartups from './pages/OurStartups';
 import Incubator from './pages/Incubator';
 import Contact from './pages/Contact';
-import MarketAccess from './pages/MarketAccess';
+
 import Books from './pages/publications/Books';
 import Magazines from './pages/publications/Magazines';
 
@@ -29,6 +29,8 @@ import GrowthMeetGallery from './pages/GrowthMeetGallery';
 // Imported Products and Technology Page
 import ProductsAndTechnology from './pages/ProductsAndTechnology';
 import ProductDetail from './pages/ProductDetail';
+import Career from './pages/Career';
+
 
 // Inline Scroll Restorer Component
 const ScrollToTop = () => {
@@ -89,6 +91,7 @@ function App() {
             <Route path="/resources" element={<Resources />} />
             <Route path="/growth-meet" element={<GrowthMeet />} />
             <Route path="/growth-meet-gallery" element={<GrowthMeetGallery />} />
+            <Route path="/career" element={<Career />} />
           </Routes>
         </main>
 
