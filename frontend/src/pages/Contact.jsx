@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaX, FaXTwitter } from 'react-icons/fa6';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -122,33 +123,12 @@ const Contact = () => {
 
             </div>
 
-            {/* Social Links */}
-            <div className="space-y-3 pt-4">
-              <h4 className="font-semibold text-gray-900 text-sm tracking-wider uppercase">Follow Us</h4>
-              <div className="flex space-x-3">
-                {[
-                  { icon: FaFacebook, link: "#", color: "hover:bg-blue-600" },
-                  { icon: FaTwitter, link: "#", color: "hover:bg-sky-500" },
-                  { icon: FaInstagram, link: "#", color: "hover:bg-pink-600" },
-                  { icon: FaLinkedin, link: "#", color: "hover:bg-blue-700" }
-                ].map((social, idx) => {
-                  const Icon = social.icon;
-                  return (
-                    <a
-                      key={idx}
-                      href={social.link}
-                      className={`w-10 h-10 rounded-xl bg-white border border-gray-150 flex items-center justify-center text-gray-400 hover:text-white hover:border-transparent ${social.color} transition-all duration-300 shadow-sm`}
-                    >
-                      <Icon size={18} />
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
-
+          
           </div>
 
           {/* Column 2: Send Message Form (7 cols) */}
+           <div className="lg:col-span-7 space-y-8">
+           
           <div className="lg:col-span-7 bg-white border border-gray-150 rounded-[2.5rem] p-8 md:p-10 shadow-sm relative">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Send us a Message</h3>
             <p className="text-gray-400 text-sm mb-8">We will reply to your message as soon as possible.</p>
@@ -158,7 +138,8 @@ const Contact = () => {
                 <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 mx-auto animate-bounce">
                   <CheckCircle size={32} />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-950">Message Sent!</h4>
+                <h4 className="text-2xl
+                 font-bold text-gray-950">Message Sent!</h4>
                 <p className="text-gray-400 max-w-sm mx-auto text-sm leading-relaxed">
                   Thank you for contacting us. Your message has been routed to our support team and we will respond to you shortly.
                 </p>
@@ -230,12 +211,38 @@ const Contact = () => {
 
               </form>
             )}
-          </div>
+                  </div>
+              {/* Social Links */}
+                
+
+              <div className="space-y-3 pt-2 lg:col-span-7">
+              <h4 className="font-bold text-gray-900 text-lg tracking-wider uppercase">Follow Us</h4>
+              <div className="flex space-x-3">
+                {[
+                  { icon: FaFacebook, link: "#", color: "hover:bg-blue-600" },
+                  { icon: FaXTwitter, link: "#", color: "hover:bg-slate-800" },
+                  { icon: FaInstagram, link: "#", color: "hover:bg-pink-600" },
+                  { icon: FaLinkedin, link: "#", color: "hover:bg-blue-700" }
+                ].map((social, idx) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={idx}
+                      href={social.link}
+                      className={`w-16 h-16 rounded-xl bg-white border border-gray-150 flex items-center justify-center text-gray-400 hover:text-white hover:border-transparent ${social.color} transition-all duration-300 shadow-sm`}
+                    >
+                      <Icon size={28} />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+</div>
 
         </div>
 
         {/* Map Embed Section */}
-        <div className="mt-16 bg-white border border-gray-150 p-4 rounded-[2.5rem] shadow-sm">
+        <div className="mt-16 bg-white border border-gray-150 p-2 rounded-[2.5rem] shadow-sm">
           <div className="h-96 w-full rounded-[2rem] overflow-hidden">
             <iframe
               title="SRISTI Innovations Location"

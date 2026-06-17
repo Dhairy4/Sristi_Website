@@ -5,6 +5,7 @@ import honeyBeeLogo from '../../assets/Honey-Bee-logo.jpg';
 import sristiPartnerLogo from '../../assets/sristi-logo.jpg';
 import biracLogo from '../../assets/birac-logo.jpg';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
@@ -135,7 +136,7 @@ const Footer = () => {
               <div className="flex gap-4">
                 {[
                   { icon: FaFacebook, href: "#" },
-                  { icon: FaTwitter, href: "#" },
+                  { icon: FaXTwitter, href: "#" },
                   { icon: FaInstagram, href: "#" },
                   { icon: FaLinkedin, href: "#" }
                 ].map((social, idx) => (
