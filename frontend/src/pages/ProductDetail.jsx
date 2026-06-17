@@ -1,12 +1,17 @@
-import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ShieldCheck, Leaf, Info } from 'lucide-react';
+
+// Static asset imports to ensure Vite resolves the paths correctly in production
+import P1 from '../assets/Products/P1.jpg';
+import P2 from '../assets/Products/P2.jpg';
+import P3 from '../assets/Products/P3.jpg';
+import P4 from '../assets/Products/P4.jpg';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // Centralized dynamic catalog mapping all 4 products directly to your asset paths
+  // Centralized dynamic catalog mapping all 4 products directly to your asset imports
   const productsCatalog = {
     "1": {
       title: "Milk Enhancer in Animals",
@@ -17,7 +22,7 @@ const ProductDetail = () => {
       packSize: "280 gm",
       application: "20 gm twice a day with feed for 7 days",
       longDescription: "We offer a complete line of herbal products, which are particularly milk enhancer compositions. These milk enhancer compositions do not affect the balanced nutrition of the milk. They are 100% natural, organic and purely herbal enhancers. They simply enhance the ruminant digestibility to a better extent, which promote the production of milk generating hormones naturally. This ensures no side effect to the animals. Moreover, it is cheaper than traditional, expensive and harmful chemicals.",
-      image_src: "/src/assets/Products/P1.jpg", 
+      image_src: P1, 
       pricing: [{ qty: "280 GM", rate: "100", dollar: "1.0449" }]
     },
     "2": {
@@ -29,7 +34,7 @@ const ProductDetail = () => {
       packSize: "100 ml, 500 ml",
       application: "Mix at the rate of 2 ml per liter water in a spray pump. Stir it thoroughly and spray on the foliage.",
       longDescription: "Growth promoter is a natural/herbal fertilizer, especially designed for the overall growth of the plants. These growth promoters are intended to accelerate the rate of growth and maturation of crops or plants, without disturbing their natural physiological actions. These premium quality plant growth promoters increase the yield as well as control the pests & pathogens. A highly effective and safe biological tonics, these growth promoters boost an all round development of the crops by regulating their metabolic activities from root to the leaves.",
-      image_src: "/src/assets/Products/P2.jpg",
+      image_src: P2,
       pricing: [
         { qty: "100 ml", rate: "50", dollar: "0.5225" }, 
         { qty: "500 ml", rate: "250", dollar: "2.6123" }
@@ -44,7 +49,7 @@ const ProductDetail = () => {
       packSize: "100 ml, 500 ml",
       application: "Mix at the rate of 2 ml per liter water in a spray pump. Stir it thoroughly and spray on the affected portion of the plant leaf, stem fruit.",
       longDescription: "All varieties of crops have to get rid of pest problem, it is a massive and costly affair. However, we have developed a wide range of 100% natural and organic compositions to control the pest problem in farming fields. These herbal pest controllers effectively remove the aphids, white fly, heliothis and several other insects – harmful for the crops. These insect control compositions are offered in different packaging specifications.",
-      image_src: "/src/assets/Products/P3.jpg",
+      image_src: P3,
       pricing: [
         { qty: "100 ml", rate: "50", dollar: "0.5225" }, 
         { qty: "500 ml", rate: "250", dollar: "2.6123" }
@@ -59,7 +64,7 @@ const ProductDetail = () => {
       packSize: "100 ml, 500 ml",
       application: "Mix at the rate of 2 ml per liter water in a spray pump. Stir it thoroughly and spray on the affected portion of the plant near the root. Alternatively, mix the formulation with irrigation water.",
       longDescription: "Termite presence causes a great loss. Looking into the need of the wood protection covering both pre- and post-construction, we have developed a large number of 100% natural, organic and herbal compositions that can be applied in industrial, commercial as well as domestic applications. These herbal compositions are very easy to apply to control termite.",
-      image_src: "/src/assets/Products/P4.jpg",
+      image_src: P4,
       pricing: [
         { qty: "100 ml", rate: "50", dollar: "0.5225" }, 
         { qty: "500 ml", rate: "250", dollar: "2.6123" }

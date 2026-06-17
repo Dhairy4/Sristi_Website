@@ -1,38 +1,42 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Search, ArrowUpRight } from 'lucide-react';
+
+// Static asset imports to ensure Vite bundles and resolves the paths correctly in production
+import P1 from '../assets/Products/P1.jpg';
+import P2 from '../assets/Products/P2.jpg';
+import P3 from '../assets/Products/P3.jpg';
+import P4 from '../assets/Products/P4.jpg';
 
 const ProductsAndTechnology = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
 
-  // Product data array with empty image paths ready for your assets
+  // Product data array using resolved static assets
   const productsData = [
     {
       id: 1,
       title: "Milk Enhancer in Animals",
       description: "We offer a complete line of herbal products, which are designed to support and boost general vitality, metabolic balance, and overall milk yield in dairy livestock using traditional formulations.",
-      image_src: "src/assets/Products/P1.jpg", // Drop your local path or URL here (e.g., "/assets/milk-enhancer.jpg")
-     
+      image_src: P1,
     },
     {
       id: 2,
       title: "Growth Promoter",
       description: "Growth promoter is a natural/herbal fertilizer, especially designed for organic farming modules to boost crop yield, strengthen plant immunity, and enrich overall soil microbes safely.",
-      image_src: "src/assets/Products/P2.jpg", // Drop your local path or URL here
-      
+      image_src: P2,
     },
     {
       id: 3,
       title: "Aphids, White Fly & Heliothis",
       description: "All varieties of crops have to get rid of pests. This targeted botanical formulation helps farmers control persistent sucking pests efficiently without harmful chemical residues left behind.",
-      image_src: "src/assets/Products/P3.jpg", // Drop your local path or URL here
-      
+      image_src: P3,
     },
     {
       id: 4,
       title: "Termite",
       description: "Herbal formulation effective against termite infestations in soil and standing crops, creating a protective repellent barrier around roots while keeping earth ecosystems safe.",
-      image_src: "src/assets/Products/P4.jpg", // Drop your local path or URL here
-     
+      image_src: P4,
     }
   ];
 
@@ -44,8 +48,8 @@ const ProductsAndTechnology = () => {
 
   // Dynamic route redirection handler for individual item click
   const handleViewDetails = (id) => {
-    // This will point to your dedicated product breakdown pages (e.g., /products-technology/1)
-    window.location.href = `/products-technology/${id}`;
+    // Navigate using react-router-dom to prevent page reload and 404 routing errors on static deploys
+    navigate(`/products-technology/${id}`);
   };
 
   return (
@@ -76,13 +80,6 @@ const ProductsAndTechnology = () => {
               className="group bg-white border border-gray-100 rounded-3xl p-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
             >
               <div>
-                {/* Top Section Content Header */}
-                {/* <div className="flex items-center justify-between mb-4">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100/30">
-                    {product.badge}
-                  </span>
-                </div> */}
-
                 {/* Direct Product Image Container Frame */}
                 <div className="w-full h-48 rounded-2xl bg-gray-100 mb-5 overflow-hidden flex items-center justify-center border border-gray-100 relative">
                   {product.image_src ? (
@@ -111,7 +108,7 @@ const ProductsAndTechnology = () => {
               <div className="pt-4 border-t border-gray-50 flex items-center justify-end">
                 <button 
                   onClick={() => handleViewDetails(product.id)}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800 transition-colors group/btn cursor-pointer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800 transition-colors group/btn cursor-pointer bg-transparent border-none"
                 >
                   View details 
                   <ArrowUpRight size={14} className="transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
