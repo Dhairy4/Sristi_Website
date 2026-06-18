@@ -137,12 +137,14 @@ const Footer = () => {
                 {[
                   { icon: FaFacebook, href: "#" },
                   { icon: FaXTwitter, href: "#" },
-                  { icon: FaInstagram, href: "#" },
+                  { icon: FaInstagram, href: "https://www.instagram.com/prakrutikkheduthaat" },
                   { icon: FaLinkedin, href: "#" }
                 ].map((social, idx) => (
                   <a 
                     key={idx}
                     href={social.href} 
+                    target={social.href.startsWith('http') ? '_blank' : undefined}
+                    rel={social.href.startsWith('http') ? 'noreferrer' : undefined}
                     className="w-12 h-12 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-white hover:text-gray-900 hover:-translate-y-1 transition-all duration-300 shadow-lg"
                   >
                     <social.icon size={20} />

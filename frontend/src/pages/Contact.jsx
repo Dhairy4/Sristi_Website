@@ -221,7 +221,7 @@ const Contact = () => {
                 {[
                   { icon: FaFacebook, link: "#", color: "hover:bg-blue-600" },
                   { icon: FaXTwitter, link: "#", color: "hover:bg-slate-800" },
-                  { icon: FaInstagram, link: "#", color: "hover:bg-pink-600" },
+                  { icon: FaInstagram, link: "https://www.instagram.com/prakrutikkheduthaat", color: "hover:bg-pink-600" },
                   { icon: FaLinkedin, link: "#", color: "hover:bg-blue-700" }
                 ].map((social, idx) => {
                   const Icon = social.icon;
