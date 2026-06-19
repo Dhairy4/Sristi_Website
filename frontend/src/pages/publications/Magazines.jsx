@@ -12,7 +12,7 @@ const MAGAZINES = [
     date: "April 14, 2020",
     datetime: "2020-04-14",
     coverImage: "https://sristiinnovations.com/wp-content/uploads/2020/04/hb-photo-28-1-b.jpg",
-    pdfLink: "",
+    pdfLink: "http://honeybee.org/magazine-all.php",
     excerpt: "When wheels of the time turn, some people are propelled into orbits they desire, some are left where they were and some fall into the abyss of nothingness. But it is not just a matter of luck. Struggles matter. Strife is not always in vain. The selection of opportunities we respond to, and build upon isn't just a random choice.",
   },
   {
@@ -22,7 +22,7 @@ const MAGAZINES = [
     date: "March 11, 2014",
     datetime: "2014-03-11",
     coverImage: "https://sristiinnovations.com/wp-content/uploads/2020/04/lok-192-3_cover_curve.jpg",
-    pdfLink: "",
+    pdfLink: "http://honeybee.org/magazine-all.php",
     excerpt: "એક વાર ઉનાળો આવે એટલે ઠંડી હવા અંદર આવી જાય છે. ભેજવાળી હવા નર સુગરીને કૂવાઓ ઉપર તથા ઊંડા સૂકાં વૃક્ષો પર માળો બાંધવાની ફરજ પાડે છે. માદા સુગરી આવીને માળાનું નિરીક્ષણ કરે છે, જો તે તેેને સંતોષપ્રદ ન લાગે તો તે માળો તોડી નાખે છે અને નર પક્ષીએ તે નવેસરથી બાંધવો પડે છે. તે તેણીને પોતાના માળા તરફ આકર્ષવા માટે ભલે ગમે તેટલા રંગો ધારણ કરે, પરંતુ માદા સુગરી માત્ર તેનો દેખાવ જ નહીં પણ માળાને પણ પ્રાધાન્ય આપે…",
   },
   {
@@ -32,7 +32,7 @@ const MAGAZINES = [
     date: "July 24, 2013",
     datetime: "2013-07-24",
     coverImage: "https://sristiinnovations.com/wp-content/uploads/2020/04/lok-184-5_thumb.jpg",
-    pdfLink: "",
+    pdfLink: "http://honeybee.org/magazine-all.php",
     excerpt: "જાપાનના દૂરના પ્રદેશમાં એક પર્વત પર એક વૃદ્ધ પુરુષ રહેતો હતો. તેના નાનકડાં ઘરની આસપાસનો પર્વત સપાટ હતો અને મેદાન સમૃદ્ધ હતું અને ત્યાં પર્વતની તળેટીમાં રહેતા બધા લોકોનાં ચોખાનાં ખેતરો હતાં. દરરોજ સવારે અને સાંજે તે વૃદ્ધ અને તેમની સાથે રહેતો તેમનો પૌત્ર નીચે ગામમાં કામ કરતા લોકોને અને જમીનની ચારે બાજુ ફેલાયેલા નીલરંગી દરિયાને નિહાળતા. સમુદ્ર એટલો નજીક હતો કે નીચે માત્ર ઘરો માટે જમીન હતી. ખેતરો માટે ન હતી. એ નાનકડા છોકરાને ડાંગરનાં ખેતરો ખૂબ જ પ્રિય…",
   },
   {
