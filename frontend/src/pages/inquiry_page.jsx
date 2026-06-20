@@ -20,17 +20,38 @@ const InquiryPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
     setIsSubmitting(true);
-    // Simulate API submission
-    setTimeout(() => {
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/contactrudra548@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: "Internship Program Inquiry"
+        })
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert("Failed to send inquiry. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error submitting inquiry form:", error);
+      alert("An error occurred. Please try again later.");
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-    }, 1200);
+    }
   };
 
   return (

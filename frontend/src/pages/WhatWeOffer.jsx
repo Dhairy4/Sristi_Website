@@ -17,6 +17,11 @@ import deepFreezerImg from "../assets/instruments/deep_freezer.png";
 import hplcSystemImg from "../assets/instruments/hplc_system.png";
 import hptlcSystemImg from "../assets/instruments/hptlc_system.png";
 import invertedMicroscopeImg from "../assets/instruments/inverted_microscope.png";
+import orbitalShakerImg from "../assets/instruments/orbital_shaker.png";
+import centrifugeImg from "../assets/instruments/centrifuge.png";
+import elisaReaderImg from "../assets/instruments/elisa_reader.png";
+import spectrophotometerImg from "../assets/instruments/spectrophotometer.png";
+import coolingCentrifugeImg from "../assets/instruments/cooling_centrifuge.png";
 
 // Data arrays organized by section
 const SERVICES = [
@@ -139,7 +144,7 @@ const PROGRAMS = [
   }
 ];
 
-const KEY_INSTRUMENTS = [
+const RENTAL_INSTRUMENTS = [
   {
     id: "cabinet",
     name: "Biosafety Cabinet",
@@ -147,8 +152,8 @@ const KEY_INSTRUMENTS = [
     category: "Microbiology & Cell Culture",
     description: "Provides a sterile work environment for handling biological samples safely, minimizing contamination risks.",
     rates: {
-      academia: "₹150 / hour OR ₹3,000 / month",
-      industry: "₹300 / hour OR ₹6,000 / month"
+      academia: "₹150 / hr OR ₹3,000 / mo",
+      industry: "₹300 / hr OR ₹6,000 / mo"
     },
     remarks: ""
   },
@@ -159,8 +164,20 @@ const KEY_INSTRUMENTS = [
     category: "Cell Culture",
     description: "Maintains optimal temperature, humidity, and CO2 levels for biological cultivation and cell growth.",
     rates: {
-      academia: "₹4,000 / tray / month OR ₹200 / tray / day",
-      industry: "₹4,000 / tray / month OR ₹200 / tray / day"
+      academia: "₹4,000 / mo / tray OR ₹200 / day / tray",
+      industry: "₹4,000 / mo / tray OR ₹200 / day / tray"
+    },
+    remarks: ""
+  },
+  {
+    id: "orbital-shakers",
+    name: "Orbital Shakers",
+    image: orbitalShakerImg,
+    category: "General Lab Equipment",
+    description: "Used for mixing, blending, or agitating substances in flasks or tubes continuously.",
+    rates: {
+      academia: "₹100 / flask clamp / day",
+      industry: "₹200 / flask clamp / day"
     },
     remarks: ""
   },
@@ -171,34 +188,10 @@ const KEY_INSTRUMENTS = [
     category: "Storage & Preservation",
     description: "Ultra-low temperature storage to preserve biological samples, enzymes, and sensitive compounds.",
     rates: {
-      academia: "₹2,000 / month / tray OR ₹100 / month / box of 100 tubes (2mL)",
-      industry: "₹4,000 / month / tray OR ₹200 / month / box of 100 tubes (2mL)"
+      academia: "₹2,000 / mo / tray OR ₹100 / mo / box (100x2mL)",
+      industry: "₹4,000 / mo / tray OR ₹200 / mo / box (100x2mL)"
     },
     remarks: ""
-  },
-  {
-    id: "hplc",
-    name: "HPLC System",
-    image: hplcSystemImg,
-    category: "Analytical Chemistry",
-    description: "High-Performance Liquid Chromatography for separating, identifying, and quantifying components in a mixture.",
-    rates: {
-      academia: "₹1,000 / sample (Assay) | ₹800 / sample (>20 samples)",
-      industry: "₹2,000 / sample"
-    },
-    remarks: "More than 20 injections"
-  },
-  {
-    id: "hptlc",
-    name: "HPTLC System",
-    image: hptlcSystemImg,
-    category: "Phytochemistry",
-    description: "High-Performance Thin-Layer Chromatography for sophisticated botanical and chemical profiling with photo documentation.",
-    rates: {
-      academia: "₹2,000 / sample (1-10 samples) | ₹1,500 / sample (11-50 samples)",
-      industry: "₹5,000 / sample (1-10 samples) | ₹3,000 / sample (11-50 samples)"
-    },
-    remarks: "Fee structure based on sample batch sizes."
   },
   {
     id: "microscope",
@@ -211,21 +204,79 @@ const KEY_INSTRUMENTS = [
       industry: "₹500 / slot / hour"
     },
     remarks: ""
+  },
+  {
+    id: "centrifuge",
+    name: "Centrifuge",
+    image: centrifugeImg,
+    category: "General Lab Equipment",
+    description: "Standard laboratory benchtop centrifuge for sedimentation and separation of liquid mixtures.",
+    rates: {
+      academia: "₹250 / hour",
+      industry: "₹500 / hour"
+    },
+    remarks: ""
+  },
+  {
+    id: "hplc",
+    name: "HPLC System",
+    image: hplcSystemImg,
+    category: "Analytical Chemistry",
+    description: "High-Performance Liquid Chromatography for separating, identifying, and quantifying components in a mixture.",
+    rates: {
+      academia: "₹1,000 / sample (Assay) | ₹800 / sample (>20)",
+      industry: "₹2,000 / sample"
+    },
+    remarks: "More than 20 injections"
+  },
+  {
+    id: "hptlc",
+    name: "HPTLC System",
+    image: hptlcSystemImg,
+    category: "Phytochemistry",
+    description: "High-Performance Thin-Layer Chromatography for sophisticated botanical and chemical profiling with photo documentation.",
+    rates: {
+      academia: "₹2,000 / sample | ₹1,500 / sample (11-50)",
+      industry: "₹5,000 / sample | ₹3,000 / sample (11-50)"
+    },
+    remarks: "Rates vary depending on sample batch size."
+  },
+  {
+    id: "elisa-reader",
+    name: "ELISA Reader",
+    image: elisaReaderImg,
+    category: "Molecular Diagnostics",
+    description: "Measures chemical, biological or physical reactions, properties and analytes within microplate wells.",
+    rates: {
+      academia: "₹50 / plate / reading",
+      industry: "₹200 / plate / reading"
+    },
+    remarks: ""
+  },
+  {
+    id: "spectrophotometer",
+    name: "Spectrophotometer",
+    image: spectrophotometerImg,
+    category: "Analytical Chemistry",
+    description: "Quantitatively measures the reflection or transmission properties of a material as a function of wavelength.",
+    rates: {
+      academia: "₹100 / hour",
+      industry: "₹200 / hour"
+    },
+    remarks: ""
+  },
+  {
+    id: "cooling-centrifuge",
+    name: "Cooling Centrifuge",
+    image: coolingCentrifugeImg,
+    category: "General Lab Equipment",
+    description: "Refrigerated laboratory centrifuge to prevent heat-sensitive samples from degrading during spins.",
+    rates: {
+      academia: "₹500 / hour",
+      industry: "₹1,000 / hour"
+    },
+    remarks: ""
   }
-];
-
-const RENTAL_CHARGES = [
-  { srNo: 1, instrument: "Biosafety Cabinet", academia: "150/hr OR 3000/month", industry: "300/hr or 6000/month", remarks: "" },
-  { srNo: 2, instrument: "CO2 Incubator", academia: "4000/tray/month OR 200/tray/day", industry: "4000/tray/month OR 200/tray/day", remarks: "" },
-  { srNo: 3, instrument: "Orbital shakers", academia: "100/flask clamp/day", industry: "200/flask clamp/day", remarks: "" },
-  { srNo: 4, instrument: "Deep freezer (-80C)", academia: "2000/month/tray OR 100/month/box of 2mLx100tubes", industry: "4000/month/tray OR 200/month/box of 2mLx100tubes", remarks: "" },
-  { srNo: 5, instrument: "Invert phase microscope", academia: "250/slot/hr", industry: "500/slot/hr", remarks: "" },
-  { srNo: 6, instrument: "Centrifuge", academia: "250/hr", industry: "500/hr", remarks: "" },
-  { srNo: 7, instrument: "HPLC", academia: "Rs 1000/- per sample (Assay) Rs 800/- per sample(>20)", industry: "Rs 2000/-", remarks: "More than 20 injections" },
-  { srNo: 8, instrument: "HPTLC System with Photo Documentation", academia: "Rs 2000 per sample Fee for 11 – 50 samples: Rs 1500 per sample", industry: "Rs 5000 per sample, Fee for 11 –50 samples: Rs 3000 per sample", remarks: "Fee for 1–10 samples:" },
-  { srNo: 9, instrument: "ELISA Reader", academia: "50/plate/reading", industry: "200/plate/reading", remarks: "" },
-  { srNo: 10, instrument: "Spectrophotometer", academia: "100/hr", industry: "200/hr", remarks: "" },
-  { srNo: 11, instrument: "Cooling centrifuge", academia: "500/hr", industry: "1000/hr", remarks: "" }
 ];
 
 const OTHER_EQUIPMENTS = [
@@ -366,8 +417,9 @@ const OfferingCard = ({ item }) => {
 
 const WhatWeOffer = () => {
   const location = useLocation();
-  const [activeTab, setActiveTab] = useState("rental");
+  const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
+  const itemsPerPage = 10;
 
   useEffect(() => {
     if (location.hash) {
@@ -381,14 +433,22 @@ const WhatWeOffer = () => {
     }
   }, [location]);
 
-  const filteredRental = RENTAL_CHARGES.filter(item => 
-    item.instrument.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredRental = RENTAL_INSTRUMENTS.filter(item => 
+    item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const filteredOther = OTHER_EQUIPMENTS.filter(item => 
     item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.manufacturer.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  // Pagination for other equipments
+  const totalPages = Math.ceil(filteredOther.length / itemsPerPage);
+  const activePage = Math.min(currentPage, totalPages || 1);
+  const startIndex = (activePage - 1) * itemsPerPage;
+  const paginatedOther = filteredOther.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <div className="bg-[#f8fafc] text-gray-700 min-h-screen relative overflow-hidden font-sans">
@@ -577,57 +637,86 @@ const WhatWeOffer = () => {
         </section>
 
         {/* Equipments & Laboratory Rates Showcase Section */}
-        <section id="equipments-showcase">
-          <SectionHeader 
-            title="Equipments' Rental Charges" 
-            subtitle="We provide access to high-end laboratory instruments on a rental basis. Select key analytical and cell culture systems are featured below." 
-          />
+     
+
+        {/* Equipments & Laboratory Rates Showcase Section */}
+        <section id="equipments-showcase" className="space-y-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+              <SectionHeader 
+                title="Equipments' Rental Charges" 
+                subtitle="We provide access to high-end laboratory instruments on a rental basis. All 11 available systems are featured below in our compact rates directory." 
+              />
+            </div>
+            
+            {/* Search Input for Rental Cards */}
+            <div className="relative w-full md:w-80 md:-mt-6">
+              <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-gray-400">
+                <Search size={18} />
+              </span>
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setCurrentPage(1); // Reset other table page just in case
+                }}
+                placeholder="Search instruments..."
+                className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-250 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-gray-700 shadow-sm"
+              />
+            </div>
+          </div>
           
           <motion.div 
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
           >
-            {KEY_INSTRUMENTS.map((inst) => (
+            {filteredRental.map((inst) => (
               <motion.div
                 key={inst.id}
-                className="bg-white rounded-[2.5rem] border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-[0_20px_40px_rgba(16,185,129,0.06)] hover:border-emerald-100 group relative"
-                whileHover={{ y: -6 }}
+                className="bg-white rounded-[2rem] border border-gray-150 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-[0_15px_30px_rgba(16,185,129,0.06)] hover:border-emerald-100 group relative h-full"
+                whileHover={{ y: -5 }}
               >
-                <div>
-                  <div className="h-60 overflow-hidden relative">
+                <div className="flex flex-col h-full">
+                  <div className="h-40 overflow-hidden relative bg-gray-50 flex-shrink-0">
                     <img
                       src={inst.image}
                       alt={inst.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
                     />
-                    <div className="absolute top-4 left-4 bg-emerald-600/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/20">
+                    <div className="absolute top-3 left-3 bg-emerald-600/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-emerald-500/10 uppercase tracking-wider">
                       {inst.category}
                     </div>
                   </div>
                   
-                  <div className="p-6 md:p-8 space-y-4">
-                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-emerald-700 transition-colors">
-                      {inst.name}
-                    </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed">
-                      {inst.description}
-                    </p>
+                  <div className="p-5 flex flex-col justify-between flex-grow space-y-4">
+                    <div className="space-y-1.5">
+                      <h3 className="text-base font-bold text-gray-900 group-hover:text-emerald-700 transition-colors leading-snug">
+                        {inst.name}
+                      </h3>
+                      <p className="text-gray-500 text-xs leading-relaxed line-clamp-2">
+                        {inst.description}
+                      </p>
+                    </div>
                     
-                    <div className="pt-4 border-t border-gray-100 space-y-3">
-                      <div className="flex justify-between items-center text-xs md:text-sm">
-                        <span className="text-gray-400 font-medium">Academia Rate:</span>
-                        <span className="font-bold text-emerald-600 text-right">{inst.rates.academia}</span>
+                    <div className="pt-3 mt-auto border-t border-gray-100 flex flex-col space-y-2">
+                      <div className="grid grid-cols-2 gap-2 text-center">
+                        <div className="bg-emerald-50/50 rounded-lg p-1.5 border border-emerald-100/30">
+                          <div className="text-[9px] text-emerald-600 font-bold uppercase tracking-wider">Academia</div>
+                          <div className="font-extrabold text-emerald-800 text-[10px] sm:text-xs mt-0.5">{inst.rates.academia}</div>
+                        </div>
+                        <div className="bg-gray-50 rounded-lg p-1.5 border border-gray-100">
+                          <div className="text-[9px] text-gray-500 font-bold uppercase tracking-wider">Industry</div>
+                          <div className="font-extrabold text-gray-700 text-[10px] sm:text-xs mt-0.5">{inst.rates.industry}</div>
+                        </div>
                       </div>
-                      <div className="flex justify-between items-center text-xs md:text-sm">
-                        <span className="text-gray-400 font-medium">Industry Rate:</span>
-                        <span className="font-bold text-gray-700 text-right">{inst.rates.industry}</span>
-                      </div>
+                      
                       {inst.remarks && (
-                        <div className="text-xs text-gray-400 italic mt-1.5 flex gap-1 items-start">
-                          <Info size={14} className="text-emerald-500 flex-shrink-0 mt-0.5" />
+                        <div className="text-[10px] text-gray-400 italic flex gap-1 items-start leading-tight pt-1">
+                          <Info size={12} className="text-emerald-500 flex-shrink-0 mt-0.5" />
                           <span>Remarks: {inst.remarks}</span>
                         </div>
                       )}
@@ -637,111 +726,93 @@ const WhatWeOffer = () => {
               </motion.div>
             ))}
           </motion.div>
+          
+          {filteredRental.length === 0 && (
+            <div className="text-center py-12 text-gray-400 text-sm bg-white rounded-3xl border border-dashed border-gray-200">
+              No instruments match your search.
+            </div>
+          )}
         </section>
 
-        {/* Searchable Directory Section */}
+        {/* Other Laboratory Equipments Directory Section */}
         <section className="bg-white border border-gray-150 rounded-[2.5rem] p-8 md:p-12 shadow-sm space-y-8" id="equipments-list">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900">Complete Equipment Directory</h3>
-              <p className="text-gray-500 text-sm mt-1">Search rates and specifications for all available instruments.</p>
-            </div>
-            
-            {/* Search Input */}
-            <div className="relative w-full md:w-80">
-              <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-gray-400">
-                <Search size={18} />
-              </span>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search instruments..."
-                className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-gray-700"
-              />
-            </div>
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900">Other Laboratory Equipments</h3>
+            <p className="text-gray-500 text-sm mt-1">Additional laboratory apparatus and instrumentation available in our incubation facility.</p>
           </div>
 
-          {/* Tabs header */}
-          <div className="flex border-b border-gray-100">
-            <button
-              onClick={() => setActiveTab("rental")}
-              className={`pb-4 px-6 font-bold text-sm transition-all relative ${
-                activeTab === "rental" 
-                  ? "text-emerald-600 border-b-2 border-emerald-500" 
-                  : "text-gray-400 hover:text-gray-600"
-              }`}
-            >
-              Equipment Rental Rates
-            </button>
-            <button
-              onClick={() => setActiveTab("other")}
-              className={`pb-4 px-6 font-bold text-sm transition-all relative ${
-                activeTab === "other" 
-                  ? "text-emerald-600 border-b-2 border-emerald-500" 
-                  : "text-gray-400 hover:text-gray-600"
-              }`}
-            >
-              Other Laboratory Equipments
-            </button>
-          </div>
-
-          {/* Active Tab Content */}
           <div className="overflow-x-auto">
-            {activeTab === "rental" ? (
-              <table className="w-full text-left border-collapse min-w-[700px]">
-                <thead>
-                  <tr className="border-b border-gray-200 text-xs font-bold text-gray-400 uppercase tracking-wider">
-                    <th className="py-4 px-4 w-16">Sr. No.</th>
-                    <th className="py-4 px-6 w-1/3">Instrument</th>
-                    <th className="py-4 px-6">Academia Rate (INR)</th>
-                    <th className="py-4 px-6">Industry Rate (INR)</th>
-                    <th className="py-4 px-6">Remarks</th>
+            <table className="w-full text-left border-collapse min-w-[600px]">
+              <thead>
+                <tr className="border-b border-gray-200 text-xs font-bold text-gray-400 uppercase tracking-wider">
+                  <th className="py-4 px-4 w-16">Sr. No.</th>
+                  <th className="py-4 px-6 w-1/2">Name of the Instrument</th>
+                  <th className="py-4 px-6">Manufacturer</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100 text-sm text-gray-600">
+                {paginatedOther.map((row) => (
+                  <tr key={row.srNo} className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-4 px-4 font-semibold text-gray-400">{row.srNo}</td>
+                    <td className="py-4 px-6 font-bold text-gray-900">{row.name}</td>
+                    <td className="py-4 px-6 text-gray-600 font-medium">{row.manufacturer || "-"}</td>
                   </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-100 text-sm text-gray-600">
-                  {filteredRental.map((row) => (
-                    <tr key={row.srNo} className="hover:bg-gray-50/50 transition-colors">
-                      <td className="py-4 px-4 font-semibold text-gray-400">{row.srNo}</td>
-                      <td className="py-4 px-6 font-bold text-gray-900">{row.instrument}</td>
-                      <td className="py-4 px-6 text-emerald-600 font-semibold">{row.academia}</td>
-                      <td className="py-4 px-6 text-gray-700 font-medium">{row.industry}</td>
-                      <td className="py-4 px-6 text-gray-400 text-xs italic">{row.remarks || "-"}</td>
-                    </tr>
-                  ))}
-                  {filteredRental.length === 0 && (
-                    <tr>
-                      <td colSpan={5} className="py-8 text-center text-gray-400">No instruments match your search.</td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
-            ) : (
-              <table className="w-full text-left border-collapse min-w-[600px]">
-                <thead>
-                  <tr className="border-b border-gray-200 text-xs font-bold text-gray-400 uppercase tracking-wider">
-                    <th className="py-4 px-4 w-16">Sr. No.</th>
-                    <th className="py-4 px-6 w-1/2">Name of the Instrument</th>
-                    <th className="py-4 px-6">Manufacturer</th>
+                ))}
+                {paginatedOther.length === 0 && (
+                  <tr>
+                    <td colSpan={3} className="py-8 text-center text-gray-400">No instruments match your search.</td>
                   </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-100 text-sm text-gray-600">
-                  {filteredOther.map((row) => (
-                    <tr key={row.srNo} className="hover:bg-gray-50/50 transition-colors">
-                      <td className="py-4 px-4 font-semibold text-gray-400">{row.srNo}</td>
-                      <td className="py-4 px-6 font-bold text-gray-900">{row.name}</td>
-                      <td className="py-4 px-6 text-gray-600 font-medium">{row.manufacturer || "-"}</td>
-                    </tr>
-                  ))}
-                  {filteredOther.length === 0 && (
-                    <tr>
-                      <td colSpan={3} className="py-8 text-center text-gray-400">No instruments match your search.</td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
-            )}
+                )}
+              </tbody>
+            </table>
           </div>
+
+          {/* Pagination controls */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-2 pt-6 border-t border-gray-100">
+              <button
+                onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                disabled={activePage === 1}
+                className={`px-4 py-2 border rounded-xl text-xs font-semibold transition-all ${
+                  activePage === 1 
+                    ? "text-gray-300 border-gray-100 cursor-not-allowed" 
+                    : "text-emerald-600 border-emerald-250 hover:bg-emerald-50 hover:border-emerald-300"
+                }`}
+              >
+                Previous
+              </button>
+              
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                <button
+                  key={pageNum}
+                  onClick={() => {
+                    setCurrentPage(pageNum);
+                    // Scroll to top of table gently
+                    document.getElementById("equipments-list")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                  className={`w-8 h-8 rounded-xl text-xs font-bold transition-all ${
+                    activePage === pageNum
+                      ? "bg-emerald-600 text-white shadow-sm"
+                      : "text-gray-500 border border-gray-200 hover:bg-gray-50"
+                  }`}
+                >
+                  {pageNum}
+                </button>
+              ))}
+
+              <button
+                onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                disabled={activePage === totalPages}
+                className={`px-4 py-2 border rounded-xl text-xs font-semibold transition-all ${
+                  activePage === totalPages 
+                    ? "text-gray-300 border-gray-100 cursor-not-allowed" 
+                    : "text-emerald-600 border-emerald-250 hover:bg-emerald-50 hover:border-emerald-300"
+                }`}
+              >
+                Next
+              </button>
+            </div>
+          )}
         </section>
 
       </div>

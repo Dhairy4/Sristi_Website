@@ -7,23 +7,50 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    // subject: '',
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 4000);
+    setIsSubmitting(true);
+    try {
+      
+      const response = await fetch("https://formsubmit.co/ajax/contactrudra548@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: "New Message from Sristi Contact Form"
+        })
+      });
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 4000);
+      } else {
+        alert("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      alert("An error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -147,7 +174,6 @@ const Contact = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Your Name</label>
                     <input
@@ -161,6 +187,7 @@ const Contact = () => {
                     />
                   </div>
 
+               
                   <div>
                     <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Email Address</label>
                     <input
@@ -173,9 +200,8 @@ const Contact = () => {
                       className="w-full bg-gray-50 border border-gray-200 text-gray-800 rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all duration-200 text-sm"
                     />
                   </div>
-                </div>
 
-                <div>
+                {/* <div>
                   <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Subject</label>
                   <input
                     type="text"
@@ -186,7 +212,7 @@ const Contact = () => {
                     placeholder="e.g. Inquiry regarding BioNEST lab usage"
                     className="w-full bg-gray-50 border border-gray-200 text-gray-800 rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all duration-200 text-sm"
                   />
-                </div>
+                </div> */}
 
                 <div>
                   <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Message</label>
@@ -203,10 +229,20 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-emerald-600 hover:bg-emerald-555 text-white font-bold rounded-xl transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+                  disabled={isSubmitting}
+                  className="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
                 >
-                  <Send size={18} />
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send size={18} />
+                      Send Message
+                    </>
+                  )}
                 </button>
 
               </form>
