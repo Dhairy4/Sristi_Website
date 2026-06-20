@@ -770,7 +770,15 @@ const PRODUCT_ALIASES = {
   "Nisarg Organics": ["nisarg_organic_farm", "nisarg"],
   "H-Motive": ["hmotive", "h_motive"],
   "Kapes Care": ["kapescare", "kapscare"],
-  "Krushimool": ["krishimool"]
+  "Krushimool": ["krishimool"],
+  "Aayurprabha": ["aayuabha", "aayuprabha"],
+  "AP Biologicals": ["ap_biological"],
+  "Gauneeti": ["gaunitte", "ganeeti", "gauneeti"],
+  "GRASSROOTS Innovators-SRISTI": ["grassroot_innovator"],
+  "PIANTA Blossoms LLP": ["pianta_blossom"],
+  "Prachin Jadibutti": ["prachin_jadibuti"],
+  "Colostrum": ["radiom_heal", "radioml_heal"],
+  "Rusi Herbal Ayurveda": ["rishi_herbal_ayurveda", "rishi_herbal_aayurveda"]
 };
 
 const getLogoForStartup = (startup) => {
