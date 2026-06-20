@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 import khedutImg from '../../assets/khedut hat.png';
@@ -8,25 +7,32 @@ import sattvikImg from '../../assets/Sattvik Food.png';
 const Banner = ({ text, bgImage, contactUrl, readMoreUrl }) => {
   return (
     <div 
-      className="relative w-full bg-slate-800 py-12 md:py-16 lg:py-20 overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url('${bgImage}')`  }}
+      className="relative w-full min-h-[380px] sm:min-h-[420px] md:min-h-[450px] bg-slate-800 rounded-[2rem] overflow-hidden flex flex-col justify-between p-8 sm:p-10 group shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-150"
     >
+      {/* Zoomable Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-105"
+        style={{ backgroundImage: `url('${bgImage}')` }}
+      />
+      
       {/* Dark Overlay for Text Readability */}
-      <div className="absolute inset-0 bg-black/60 z-10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-black/60 z-10 transition-colors duration-300 group-hover:bg-black/65 pointer-events-none" />
 
       {/* Content Container */}
-      <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center h-full">
+      <div className="relative z-20 flex flex-col justify-between h-full flex-grow text-center">
         
-        {/* Banner Text */}
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center mb-6 md:mb-8 drop-shadow-md leading-tight">
-          {text}
-        </h2>
+        {/* Banner Text (Centered) */}
+        <div className="flex-grow flex items-center justify-center my-auto">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white leading-snug tracking-tight drop-shadow-md">
+            {text}
+          </h2>
+        </div>
         
         {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-8">
           <Link 
             to={contactUrl} 
-            className="px-8 py-3.5 bg-emerald-600 text-white font-semibold rounded-md hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-emerald-500/50 text-center"
+            className="w-full sm:w-auto px-7 py-3 bg-[#82b440] text-white font-semibold rounded-2xl hover:bg-[#729e37] transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none text-center text-sm"
           >
             Contact Us
           </Link>
@@ -36,14 +42,14 @@ const Banner = ({ text, bgImage, contactUrl, readMoreUrl }) => {
               href={readMoreUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3.5 bg-emerald-600 text-white font-semibold rounded-md hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-emerald-500/50 text-center"
+              className="w-full sm:w-auto px-7 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-2xl backdrop-blur-md border border-white/20 transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none text-center text-sm"
             >
               Read More
             </a>
           ) : (
             <Link 
               to={readMoreUrl} 
-              className="px-8 py-3.5 bg-emerald-600 text-white font-semibold rounded-md hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-emerald-500/50 text-center"
+              className="w-full sm:w-auto px-7 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-2xl backdrop-blur-md border border-white/20 transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none text-center text-sm"
             >
               Read More
             </Link>
@@ -58,19 +64,21 @@ const Banner = ({ text, bgImage, contactUrl, readMoreUrl }) => {
 // Main Export Component
 const PromotionalBanners = () => {
   return (
-    <section className="w-full flex flex-col gap-8 my-16">
-      <Banner 
-        text="SRISTI’s Khedut Haat (Every Thursday and Sunday) - 7 AM to 10 AM" 
-        bgImage={khedutImg}
-        contactUrl="/contact"
-        readMoreUrl="/khedut-haat"
-      />
-      <Banner 
-        text="Sattvik Traditional Food Festival" 
-        bgImage={sattvikImg}
-        contactUrl="/contact"
-        readMoreUrl="https://sattvik.sristi.org"
-      />
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Banner 
+          text="SRISTI’s Khedut Haat (Every Thursday and Sunday) - 7 AM to 10 AM" 
+          bgImage={khedutImg}
+          contactUrl="/contact"
+          readMoreUrl="/khedut-haat"
+        />
+        <Banner 
+          text="Sattvik Traditional Food Festival" 
+          bgImage={sattvikImg}
+          contactUrl="/contact"
+          readMoreUrl="https://sattvik.sristi.org"
+        />
+      </div>
     </section>
   );
 };
