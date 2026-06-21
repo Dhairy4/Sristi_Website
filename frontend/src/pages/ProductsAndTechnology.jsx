@@ -7,6 +7,8 @@ import P1 from '../assets/Products/P1.jpg';
 import P2 from '../assets/Products/P2.jpg';
 import P3 from '../assets/Products/P3.jpg';
 import P4 from '../assets/Products/P4.jpg';
+import forestImage from '../assets/forest.jpeg';
+
 
 // Animated Counter component
 const AnimatedCounter = ({ target, suffix = '', prefix = '', duration = 1200 }) => {
@@ -99,9 +101,9 @@ const ProductsAndTechnology = () => {
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            src={forestImage}
             alt="Farming Greenery Background"
-            className="w-full h-full object-cover opacity-15 mix-blend-overlay"
+            className="w-full h-full object-cover opacity-35 mix-blend-overlay"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/90 to-transparent"></div>
         </div>

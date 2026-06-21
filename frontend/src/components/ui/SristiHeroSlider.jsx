@@ -3,39 +3,44 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import growthmeet from '../../assets/Growth_Meet.jpeg';
+import khedutHaat from '../../assets/heroslider/khedut_haat.jpeg';
+import sattvik from '../../assets/heroslider/sattvik.jpeg';
+import networking from '../../assets/heroslider/marketplace.jpeg';
+import resources from '../../assets/heroslider/resources_fac.png';
+import incubatees from '../../assets/heroslider/incubatees.png';
 
 const slidesData = [
   {
     id: 1,
-    imageSrc: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80',
+    imageSrc: khedutHaat,
     title: 'PRAKRUTIK KHEDUT HAAT',
     ctaLink: '/khedut-haat',
     ctaText: 'Discover Market Support',
   },
   {
     id: 2,
-    imageSrc: 'https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&q=80',
+    imageSrc: sattvik,
     title: 'SATTVIK FOOD FESTIVAL',
     ctaLink: '/sattvik',
     ctaText: 'Explore Sattvik',
   },
   {
     id: 3,
-    imageSrc: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80',
+    imageSrc: networking,
     title: 'MARKET ACCESS & NETWORKING',
     ctaLink: '/networking',
     ctaText: 'Learn More',
   },
   {
     id: 4,
-    imageSrc: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80',
+    imageSrc: incubatees,
     title: 'OUR INCUBATEES',
     ctaLink: '/incubatees',
     ctaText: 'View Incubatees',
   },
   {
     id: 5,
-    imageSrc: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80',
+    imageSrc: resources,
     title: 'RESOURCES & FACILITIES',
     ctaLink: '/resources',
     ctaText: 'View Facilities',

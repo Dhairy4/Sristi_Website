@@ -15,10 +15,10 @@ const Footer = () => {
       <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-emerald-500/5 rounded-full blur-[150px] pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[150px] pointer-events-none translate-x-1/3 translate-y-1/3"></div>
 
-      <div className="relative z-10 max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8">
+      <div className="relative z-10 max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8">
         
         {/* Massive Brand Statement (Ultra-Modern Touch) */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-24 gap-12 border-b border-gray-800/60 pb-16">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-12 border-b border-gray-800/60 pb-10">
           
            
            <Link to="/" className="group relative block shrink-0">
@@ -42,7 +42,7 @@ const Footer = () => {
            </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12 mb-16">
           
           {/* Quick Links */}
           <div className="lg:col-span-3">
@@ -129,7 +129,7 @@ const Footer = () => {
         </div>
 
         {/* Partners & Legal Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-12 border-t border-gray-800/60">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-8 border-t border-gray-800/60">
            
            {/* Legal & Registrations */}
            <div className="lg:col-span-5 flex flex-col gap-6">

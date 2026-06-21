@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Tent, MapPin, CheckCircle, Info, Users, Phone, Sprout, LineChart, Leaf, Star, BookOpen, Download, Eye, ExternalLink } from 'lucide-react';
+import { Tent, MapPin, CheckCircle, Info, Users, Phone, Sprout, LineChart, Leaf, Star, BookOpen, Download, Eye, ExternalLink, Package } from 'lucide-react';
 import forestAsset from "../assets/forest.jpeg";
 import khedutHaatImg from "../assets/For_Objectives_About us.jpg";
 
@@ -31,6 +31,54 @@ const staggerContainer = {
       staggerChildren: 0.1
     }
   }
+};
+
+// Animated Counter Component using IntersectionObserver and requestAnimationFrame
+const AnimatedCounter = ({ end, suffix = "", duration = 1500 }) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const counterRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime = null;
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = timestamp - startTime;
+      const percentage = Math.min(progress / duration, 1);
+      
+      setCount(Math.floor(end * percentage));
+
+      if (progress < duration) {
+        requestAnimationFrame(animate);
+      } else {
+        setCount(end);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [isVisible, end, duration]);
+
+  return <span ref={counterRef}>{count}{suffix}</span>;
 };
 
 const KhedutHaatDetails = () => {
@@ -303,11 +351,42 @@ const KhedutHaatDetails = () => {
 
         {/* Highlights */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}>
-          <div className="text-center mb-20">
-            <h2 className="text-5xl lg:text-4=5xl font-extrabold text-gray-900 inline-flex items-center gap-3">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 inline-flex items-center gap-3">
               Key Highlights
-              </h2>
+            </h2>
           </div>
+
+          {/* Stats / Impact Panel at the top of highlights section */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 max-w-6xl mx-auto">
+            {[
+              { label: "Total Khedut Haats Organized", value: 412, suffix: "+", icon: Tent, color: "text-emerald-600" },
+              { label: "Total Products Available", value: 400, suffix: "+", icon: Package, color: "text-teal-600" },
+              { label: "Total Annual Revenue Generated (Rs.)", value: 6, suffix: "Cr+", icon: LineChart, color: "text-green-600" },
+              { label: "Farmers Associated", value: 125, suffix: "+", icon: Users, color: "text-emerald-600" },
+              { label: "Incubatees & SHGs Associated", value: 35, suffix: "+", icon: Sprout, color: "text-teal-600" },
+              { label: "Weekly Customer Visits", value: 4000, suffix: "+", icon: Eye, color: "text-green-600" }
+            ].map((stat, idx) => {
+              const Icon = stat.icon;
+              return (
+                <div 
+                  key={idx}
+                  className="bg-white border border-gray-100 rounded-3xl p-6 shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-5"
+                >
+                  <div className="p-4 rounded-2xl bg-emerald-50 text-emerald-600 flex-shrink-0">
+                    <Icon size={26} />
+                  </div>
+                  <div>
+                    <div className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">
+                      <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                    </div>
+                    <div className="text-xs md:text-sm text-gray-500 font-semibold mt-1 tracking-wide leading-tight">{stat.label}</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: "Organic & Chemical-Free", desc: "Offers naturally grown fruits, vegetables, pulses, and oils free from harmful chemicals.", icon: <Leaf size={24}/> },
@@ -329,9 +408,16 @@ const KhedutHaatDetails = () => {
 
         {/* Locations */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4">Our Locations</h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">Visit us at any of our 12 active markets across Gujarat</p>
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900">
+              Our Locations
+            </h2>
+            <p className="text-emerald-700 font-medium text-lg md:text-xl max-w-3xl mx-auto italic">
+              "તમામ ખેડૂત મિત્રોનો ખૂબ ખૂબ આભાર, <br></br>જેઓ કુદરતી ખેતી દ્વારા લોકોના સ્વાસ્થ્ય અને પર્યાવરણની રક્ષા કરે છે."
+            </p>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+              Visit us at any of our 12 active markets across Gujarat
+            </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {locations.map((loc, idx) => (
@@ -452,13 +538,13 @@ const KhedutHaatDetails = () => {
               </div>
             </div>
 
-            <div className="lg:w-1/3 w-full flex justify-center">
+            <div className="lg:w-1/2 w-full flex justify-center">
               <div 
                 onClick={handleReadOnline}
-                className="relative group cursor-pointer w-64 md:w-72 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-105 border-4 border-white/20 hover:border-emerald-400/50"
+                className="relative group cursor-pointer w-150 md:w-150  rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-105 border-4 border-white/20 hover:border-emerald-400/50"
               >
-                <div className="absolute inset-0 bg-emerald-950/40 group-hover:bg-transparent transition-colors z-10 duration-500 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white/20 group-hover:bg-emerald-500 text-white rounded-full flex items-center justify-center backdrop-blur-md shadow-lg transition-all transform group-hover:scale-110 duration-500 opacity-80 group-hover:opacity-100">
+                <div className="absolute inset-0 bg-emerald-950/30 group-hover:bg-transparent transition-colors z-10 duration-500 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-white/10 group-hover:bg-emerald-500 text-white rounded-full flex items-center justify-center backdrop-blur-md shadow-lg transition-all transform group-hover:scale-110 duration-500 opacity-80 group-hover:opacity-100">
                     <BookOpen size={28} />
                   </div>
                 </div>

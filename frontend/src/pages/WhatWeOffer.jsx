@@ -116,7 +116,8 @@ const PROGRAMS = [
     title: "Internship Program",
     icon: Users,
     description: "Nurturing grassroots and student-led innovations through hands-on national internship initiatives.",
-    link: "/inquiry",
+    link: "/contact",
+    label: "Inquire Now",
     points: [
       "Immersive technical learning & problem solving.",
       "Direct access to SRISTI mentors & industry experts."
@@ -127,6 +128,8 @@ const PROGRAMS = [
     title: "Sattvik Food Festival",
     icon: Award,
     description: "A flagship community festival providing direct market-linkage for grassroots food innovators.",
+    link: "/sattvik",
+    label: "Visit Sattvik",
     points: [
       "Showcase culinary innovations and traditional recipes.",
       "Direct B2C market linkage with conscious consumers."
@@ -137,6 +140,8 @@ const PROGRAMS = [
     title: "Khedut Haat",
     icon: Leaf,
     description: "Empowering farmers by providing a direct, transparent marketplace for their agricultural produce.",
+    link: "/khedut-haat-details",
+    label: "Learn More",
     points: [
       "Direct farmer-to-consumer sales eliminating middlemen.",
       "Fair pricing mechanisms and complete transparency."
@@ -403,9 +408,9 @@ const OfferingCard = ({ item }) => {
           <div className="mt-6 pt-4 border-t border-gray-100/60 flex">
             <Link
               to={item.link}
-              className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#82b440] hover:bg-[#729e37] text-white font-bold text-xs rounded-xl shadow-md transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl shadow-md transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
-              Inquire Now
+              {item.label}
               <ArrowRight size={14} />
             </Link>
           </div>

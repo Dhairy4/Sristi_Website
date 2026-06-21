@@ -85,8 +85,8 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
           {/* Column 1: Contact Information (5 cols) */}
-          <div className="lg:col-span-5 space-y-8">
-            <div className="space-y-4">
+          <div className="lg:col-span-5 space-y-12">
+            <div className="space-y-6">
               <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">Connect With Our Team</h2>
               <p className="text-gray-500 leading-relaxed">
                 Whether you are a startup looking for lab spaces, a grassroots innovator seeking validation, or an investor looking to fund solutions, we are here to support you.
@@ -94,10 +94,10 @@ const Contact = () => {
             </div>
 
             {/* Info Cards */}
-            <div className="space-y-6">
+            <div className="space-y-8">
 
               {/* Phone Card */}
-              <div className="flex items-start gap-4 bg-white border border-gray-150 p-6 rounded-2xl shadow-sm">
+              <div className="flex items-start gap-4 bg-white border border-gray-150 p-8 rounded-[2.5rem] shadow-sm">
                 <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center flex-shrink-0">
                   <Phone size={22} />
                 </div>
@@ -109,7 +109,7 @@ const Contact = () => {
               </div>
 
               {/* Email Card */}
-              <div className="flex items-start gap-4 bg-white border border-gray-150 p-6 rounded-2xl shadow-sm">
+              <div className="flex items-start gap-4 bg-white border border-gray-150 p-8 rounded-[2.5rem] shadow-sm">
                 <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center flex-shrink-0">
                   <Mail size={22} />
                 </div>
@@ -122,31 +122,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Office Address Card */}
-              <div className="flex items-start gap-4 bg-white border border-gray-150 p-6 rounded-2xl shadow-sm">
-                <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={22} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-1">Office Address</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    AES Boys Hostel Campus, Nr. Gujarat University Library & SBI Bank Navrangpura, Ahmedabad - 380009
-                  </p>
-                </div>
-              </div>
-
-              {/* Incubation Space Address Card */}
-              <div className="flex items-start gap-4 bg-white border border-gray-150 p-6 rounded-2xl shadow-sm">
-                <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={22} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-1">Incubation Space Address</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    SRISTI Innovations, C/O Grambharti Campus, Gandhinagar-Mahudi Rd, Gandhinagar, Gujarat - 382650
-                  </p>
-                </div>
-              </div>
 
             </div>
 
@@ -156,102 +131,9 @@ const Contact = () => {
           {/* Column 2: Send Message Form (7 cols) */}
            <div className="lg:col-span-7 space-y-8">
            
-          <div className="lg:col-span-7 bg-white border border-gray-150 rounded-[2.5rem] p-8 md:p-10 shadow-sm relative">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Send us a Message</h3>
-            <p className="text-gray-400 text-sm mb-8">We will reply to your message as soon as possible.</p>
+             {/* Social Links */}
 
-            {submitted ? (
-              <div className="py-16 text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 mx-auto animate-bounce">
-                  <CheckCircle size={32} />
-                </div>
-                <h4 className="text-2xl
-                 font-bold text-gray-950">Message Sent!</h4>
-                <p className="text-gray-400 max-w-sm mx-auto text-sm leading-relaxed">
-                  Thank you for contacting us. Your message has been routed to our support team and we will respond to you shortly.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-
-                  <div>
-                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Your Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="e.g. John Doe"
-                      className="w-full bg-gray-50 border border-gray-200 text-gray-800 rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all duration-200 text-sm"
-                    />
-                  </div>
-
-               
-                  <div>
-                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Email Address</label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="e.g. john@example.com"
-                      className="w-full bg-gray-50 border border-gray-200 text-gray-800 rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all duration-200 text-sm"
-                    />
-                  </div>
-
-                {/* <div>
-                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Subject</label>
-                  <input
-                    type="text"
-                    name="subject"
-                    required
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    placeholder="e.g. Inquiry regarding BioNEST lab usage"
-                    className="w-full bg-gray-50 border border-gray-200 text-gray-800 rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all duration-200 text-sm"
-                  />
-                </div> */}
-
-                <div>
-                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Message</label>
-                  <textarea
-                    name="message"
-                    required
-                    rows="6"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Write your message here..."
-                    className="w-full bg-gray-50 border border-gray-200 text-gray-800 rounded-xl py-3 px-4 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all duration-200 resize-none text-sm"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send size={18} />
-                      Send Message
-                    </>
-                  )}
-                </button>
-
-              </form>
-            )}
-                  </div>
-              {/* Social Links */}
-                
-
-              <div className="space-y-3 pt-2 lg:col-span-7">
+                         <div className="space-y-3 pt-2 lg:col-span-7">
               <h4 className="font-bold text-gray-900 text-lg tracking-wider uppercase">Follow Us</h4>
               <div className="flex space-x-3">
                 {[
@@ -273,13 +155,26 @@ const Contact = () => {
                 })}
               </div>
             </div>
-</div>
+          
 
-        </div>
+                
+  {/* Map Embed Section */}
+        <div className="mt-0 flex  bg-white border border-gray-150 p-2 rounded-[2.5rem] shadow-sm">
+               <a href="https://maps.app.goo.gl/WWwWVwHHg7JhcadW7" target="_blank" rel="noopener noreferrer" className="w-full">
+               <div className="flex items-start gap-6 p-3">
 
-        {/* Map Embed Section */}
-        <div className="mt-16 bg-white border border-gray-150 p-2 rounded-[2.5rem] shadow-sm">
-          <div className="h-96 w-full rounded-[2rem] overflow-hidden">
+          <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center flex-shrink-0">
+                  <MapPin size={22} />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 mb-1">Office Address</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    AES Boys Hostel Campus, Nr. Gujarat University Library & SBI Bank Navrangpura, Ahmedabad - 380009
+                  </p>
+                </div>
+              </div>
+              </a>
+          <div className="h-36 w-full rounded-[2rem] overflow-hidden">
             <iframe
               title="SRISTI Innovations Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29372.29564240452!2d72.5455422!3d23.040767899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f53fffffff%3A0x29386d81d5488a17!2sSRISTI!5e0!3m2!1sen!2sin!4v1780988099283!5m2!1sen!2sin" 
@@ -293,6 +188,40 @@ const Contact = () => {
           </div>
         </div>
 
+        <div className="mt-5 flex bg-white border border-gray-150 p-2 rounded-[2.5rem] shadow-sm">
+             <a href="https://maps.app.goo.gl/WWwWVwHHg7JhcadW7" target="_blank" rel="noopener noreferrer" className="w-full">
+               <div className="flex items-start gap-6 p-4">
+
+          <div className="w-12 h-12  rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center flex-shrink-0">
+                  <MapPin size={22} />
+                </div>
+                <div>
+                    <h4 className="font-bold text-gray-900 mb-1">Incubation Space Address</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    SRISTI Innovations, C/O Grambharti Campus, Gandhinagar-Mahudi Rd, Gandhinagar, Gujarat - 382650
+                  </p>
+                </div>
+              </div>
+              </a>
+          <div className=" h-38 w-full rounded-[2rem] overflow-hidden">
+           <iframe 
+           title="SRISTI Innovations Location"
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.4092894253827!2d72.69410517567708!3d23.373406278929437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c336ad288000b%3A0x19ec034626e4b6e6!2sSRISTI!5e0!3m2!1sen!2sin!4v1782066843380!5m2!1sen!2sin" 
+           width="100%" 
+           height="100%" 
+           style={{ border: 0 }} 
+           allowfullscreen="" 
+           loading="lazy" 
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+      
+</div>
+
+        </div>
+
+      
       </div>
     </div>
   );

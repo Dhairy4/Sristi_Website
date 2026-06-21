@@ -14,7 +14,7 @@ import {
   Compass
 } from 'lucide-react';
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
-
+import forestImage from '../assets/forest.jpeg';
 // Animated Counter component
 const AnimatedCounter = ({ target, suffix = '', prefix = '', duration = 1200 }) => {
   const [count, setCount] = useState(0);
@@ -960,9 +960,9 @@ const OurStartups = () => {
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            src={forestImage}
             alt="Farming Greenery Background"
-            className="w-full h-full object-cover opacity-15 mix-blend-overlay"
+            className="w-full h-full object-cover opacity-35 mix-blend-overlay"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/90 to-transparent"></div>
         </div>
